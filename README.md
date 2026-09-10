@@ -1,91 +1,96 @@
 # RafRadar
 
-**Bir markanın e-ticaret arama sonuçlarındaki görünürlüğünü ölçen dijital raf denetim aracı.**
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Data](https://img.shields.io/badge/Data-Trendyol%20%2B%20N11-f27a1a.svg)](#channels)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#requirements)
 
-Perakendede "raf payı" ölçülür: ürün rafta var mı, göz hizasında mı, ne kadar yer
-kaplıyor, fiyatı doğru mu. RafRadar aynı soruları **online rafa** sorar; çünkü
-fiziksel rafta göz hizası neyse, dijital rafta arama sonuçlarının ilk sayfası odur.
+**Digital shelf audit for e-commerce search results.** Retail teams measure the
+physical shelf: is the product there, is it at eye level, how much space does it
+take, is the price right. RafRadar asks the same four questions about the **online
+shelf** — because what eye level is on a physical shelf, the first page of search
+results is online.
 
-Trendyol ve N11'de kategori aramaları yürütür, çıkan her ürünün markasını, fiyatını
-ve kaçıncı sırada göründüğünü kaydeder, sonra bunu okunabilir bir panoya ve PDF
-rapora dönüştürür.
+Point it at a brand and a set of categories. It runs the searches, records every
+product's brand, price and rank, and turns that into a readable dashboard, a
+printable report and a set of actions derived from the data itself.
 
-> Markanızı arayan sizi bulur. Kategoriyi arayan bulamıyorsa, yeni müşteri kazanma
-> kanalınız kapalı demektir. RafRadar bu farkı sayıyla gösterir.
+🇹🇷 **Türkçe sürüm: [README.tr.md](README.tr.md)**
 
-![RafRadar panosu](gorseller/pano.png)
+![RafRadar dashboard](gorseller/pano.png)
 
-<sub>Örnek çıktı: `yapilandirma/ornek-takviye.json` ile yapılan gerçek bir tarama.
-Kullanılan marka ve kategoriler yapılandırmadan gelir.</sub>
+<sub>Real output from `yapilandirma/ornek-takviye.json`. The brand and categories
+come from configuration, not from code.</sub>
 
 ---
 
-## Ne ölçer
+## What it measures
 
-| Metrik | Karşılığı |
+| Metric | Retail equivalent |
 |---|---|
-| **Bulunurluk** | Kategori aramasında markanın ürünü çıkıyor mu? |
-| **Görünürlük** | İlk 10 organik sonuçta mı? (*dijital göz hizası*) |
-| **Raf payı** | Marka ürün sayısı / organik sonuç sayısı |
-| **Fiyat endeksi** | Marka medyan fiyatı / kategori medyan fiyatı |
+| **Availability** | Does the brand appear at all in a category search? |
+| **Visibility** | Is it in the top 10 organic results? (*digital eye level*) |
+| **Share of shelf** | Brand products ÷ organic results |
+| **Price index** | Brand median price ÷ category median price |
 
-Bunlara ek olarak:
+Plus three things a plain rank check misses:
 
-- **Reklam baskısı** — arama sayfasındaki vitrin/sponsorlu yerleşimleri kim almış
-- **Arama kelimesi tuzağı** — aynı kategoride kelimeye göre görünürlük nasıl değişiyor
-- **Marka araması / kategori araması farkı** — marka adıyla bulunup kategoriyle bulunamama
+- 📣 **Ad pressure** — who bought the sponsored carousel slots on the search page
+- 🔤 **Keyword trap** — how visibility swings between wordings of the same category
+- 🔍 **Brand search vs category search** — found by name, invisible by category
 
-Aksiyon önerileri elle yazılmaz; **taramanın kendisinden üretilir.** Bir kategoride
-bulunurluk sıfırsa, sıralama ilk 10'a giremiyorsa ya da vitrin alanını tümüyle
-rakipler almışsa ilgili madde otomatik doğar ve kanıtı olarak hangi ölçümden çıktığı
-yazılır.
+## What it does
+
+- 🛒 **Two channels** — N11 (free, reads the site's own JSON-LD) and Trendyol
+  (via Firecrawl with Turkey geo-targeting, since the site blocks plain requests)
+- ✂️ **Separates paid from organic** — sponsored carousel cards are not shelf.
+  Counting them inflates share of shelf; they are reported as their own metric
+- 💸 **Reads prices from the DOM, not from text** — a product card shows sale
+  price, strikethrough price and unit price together, and a regex picks the wrong one
+- 🧾 **Generates the actions** — every recommendation is born from a threshold
+  being crossed, and carries the measurement it came from. Nothing is hand-written
+- 🖥️ **Local control panel** — run the pipeline from a browser with live output,
+  no command line needed
+- ⚙️ **Configurable** — brands, categories and search terms live in a JSON file
 
 ---
 
-## Hızlı başlangıç
+## Quick start
 
 ```bash
-pip install requests beautifulsoup4
-```
-
-Sonra kontrol panelini açın:
-
-```bash
+git clone https://github.com/FlyerFukas/rafradar.git
+cd rafradar
+py -m pip install -r requirements.txt
+cp yapilandirma/ornek-takviye.json yapilandirma/aktif.json
 py src/panel.py
 ```
 
-Windows'ta `PANELI-BASLAT.bat` dosyasına çift tıklamak da yeterlidir. Tarayıcıda
-`http://localhost:8000` açılır: adımları tek tek veya tüm akışı tek tuşla
-çalıştırır, çıktıyı canlı izler, üretilen pano ile PDF'i oradan açarsınız.
+Your browser opens at `http://localhost:8000`. Run the whole pipeline with one
+button or step through it, watch the output stream live, then open the generated
+dashboard and PDF from the panel.
 
-Panel yalnızca kendi bilgisayarınızdan erişilebilir ve Python standart kütüphanesi
-dışında bağımlılık istemez.
+On Windows, double-clicking `PANELI-BASLAT.bat` does the same thing.
 
-![Kontrol paneli](gorseller/panel.png)
+![Control panel](gorseller/panel.png)
 
-Her adımın altında en son ürettiği dosya, boyutu ve saati yazılıdır. Tarama yapıp
-panoyu yeniden üretmeyi unutursanız panel bunu fark eder ve "güncel değil" diye
-işaretler.
+Each step shows the file it last produced, its size and timestamp. If you re-scan
+but forget to rebuild the dashboard, the panel notices and flags it as stale
+instead of quietly showing you old numbers.
 
-### Komut satırını tercih ederseniz
+### From the command line
 
 ```bash
-py src/topla.py               # tarama
-py src/analiz.py              # skor kartını hesapla
-py src/marka_vs_kategori.py   # marka araması / kategori araması testi
-py src/pano.py                # panoyu üret -> cikti/pano.html
+py src/topla.py               # scan
+py src/analiz.py              # compute the scorecard
+py src/marka_vs_kategori.py   # brand search vs category search test
+py src/pano.py                # build the dashboard
 ```
 
 ---
 
-## Kendi markanızı tanımlama
+## Configuring your own brand
 
-Marka ve kategoriler koda gömülü değildir; `yapilandirma/` altındaki bir JSON
-dosyasından okunur. Hazır örnekleri kopyalayıp düzenlemeniz yeterli:
-
-```bash
-cp yapilandirma/ornek-takviye.json yapilandirma/aktif.json
-```
+Nothing about the brand is hardcoded. Copy an example and edit it:
 
 ```json
 {
@@ -108,119 +113,109 @@ cp yapilandirma/ornek-takviye.json yapilandirma/aktif.json
 }
 ```
 
-| Alan | Anlamı |
+| Field | Meaning |
 |---|---|
-| `ad` | Raporda görünen izlenen taraf |
-| `markalar` | Marka adı → ürün adında aranacak anahtar kelimeler |
-| `kategoriler` | Kategori adı → hangi kelimelerle aranacağı |
-| `goz_hizasi` | Kaçıncı sıraya kadar "göz hizası" sayılacağı |
-| `haric_markalar` | Bilinçli olarak analiz dışı bırakılanlar ve sebebi |
+| `ad` | The tracked party, shown as the report title |
+| `markalar` | Brand name → keywords to look for in product titles |
+| `kategoriler` | Category → the search terms that define it |
+| `goz_hizasi` | How many ranks count as "eye level" |
+| `haric_markalar` | Products deliberately excluded, with the reason |
 
-Yapılandırmayı doğrulamak için:
+Three examples ship with the repo: supplements, baby care, and a pharmacy-channel
+case that demonstrates exclusions. Validate a config with `py src/ayarlar.py`.
 
-```bash
-py src/ayarlar.py
-```
+### Why exclusions exist
 
-Birden fazla yapılandırmayı bir arada tutup `RAFRADAR_AYAR` ortam değişkeniyle
-seçebilirsiniz.
-
-### `haric_markalar` niçin var
-
-Bazı ürünlerin online rafta bulunmaması bir eksiklik değil, zorunluluktur.
-Örneğin Türkiye'de ruhsatlı beşeri tıbbi ürünlerin internetten satışı yasaktır;
-bunları analize dahil etmek ortalama raf payını yapay olarak düşürür. Bu alan,
-öyle ürünleri sebebiyle birlikte ayırmanızı sağlar ve rapor onları ayrı bölümde
-gösterir. Örneği `yapilandirma/ornek-eczane-kanali.json` içinde bulabilirsiniz.
+Sometimes a product's absence from the online shelf is not a gap but a legal
+requirement — prescription medicines cannot be sold online in Turkey, for example.
+Counting them would drag the average down for a reason the brand cannot act on.
+`haric_markalar` separates those with their stated reason, and the report shows
+them in their own section.
 
 ---
 
-## Mimari
+## How it works
 
 ```
 src/
-  ayarlar.py             Yapılandırma yükleyici ve marka eşleme
-  kanal_n11.py           N11 adaptörü (JSON-LD ItemList)
-  kanal_trendyol.py      Trendyol adaptörü (Firecrawl + element ayrıştırma)
-  topla.py               Çok kanallı tarama
-  analiz.py              Skor kartı motoru (organik / sponsorlu ayrımlı)
-  marka_vs_kategori.py   Marka araması ile kategori aramasının karşılaştırması
-  pano.py + sablon.html  HTML pano üreteci
-  panel.py + panel.html  Yerel kontrol paneli
-yapilandirma/            Marka ve kategori tanımları (JSON)
-veri/                    Ham tarama çıktıları
-cikti/                   Hesaplanmış skorlar, pano, PDF
+  ayarlar.py             Config loader and brand matching
+  kanal_n11.py           N11 adapter (JSON-LD ItemList)
+  kanal_trendyol.py      Trendyol adapter (Firecrawl + DOM parsing)
+  topla.py               Multi-channel scan
+  analiz.py              Scorecard engine (organic / sponsored split)
+  marka_vs_kategori.py   Brand search vs category search comparison
+  pano.py + sablon.html  Dashboard builder
+  panel.py + panel.html  Local control panel
+yapilandirma/            Brand and category definitions (JSON)
+veri/                    Raw scan output
+cikti/                   Scores, dashboard, PDF
 ```
 
-Her adım çıktısını diske yazar, sonraki adım onu okur. Böylece tarama bir kez
-yapılır, analiz istediğiniz kadar tekrar çalıştırılabilir.
+Each step writes its output to disk and the next one reads it, so a scan happens
+once and the analysis can be re-run as often as you like.
 
-Yeni bir satış kanalı eklemek için `ara(kelime)` fonksiyonu olan ve
-`{kanal, arama, urunler[]}` döndüren bir modül yazıp `topla.py`'ye tanıtmak yeterlidir.
+Adding a sales channel means writing a module with an `ara(term)` function that
+returns `{kanal, arama, urunler[]}` and registering it in `topla.py`.
 
-### Neden dil modeli kullanılmıyor
+### No language model in the number path
 
-Raf payı, fiyat endeksi ve sıralama gibi sayıların tamamı saf Python ile hesaplanır.
-Ticari bir karara girecek bir sayının üretilme biçimi denetlenebilir olmalıdır;
-bu yüzden hesaplama katmanında dil modeli yoktur. Aracın "akıllı" tarafı, kuralların
-veriye uygulanmasıdır — tahmin değil.
-
----
-
-## Veri kalitesi kararları
-
-Aşağıdakiler geliştirme sırasında fark edilip düzeltilmiş gerçek hatalardır ve
-sayıların neden güvenilir olduğunu açıklar.
-
-**Sponsorlu yerleşim ayrıştırılır.** Trendyol arama sayfalarındaki kaydırmalı
-vitrin blokları organik sonuç değil, satın alınmış alandır. Ayrıştırılmadığında
-raf payı yapay olarak yüksek çıkar; ayrı metrik olarak raporlanır.
-
-**Fiyat, metinden değil elementten okunur.** Ürün kartında satış fiyatı, üstü
-çizili liste fiyatı ve birim fiyat birlikte geçer — örneğin
-`649,90 TL ( 5.415,83 TL/kg ) 617,40 TL`. Düzenli ifadeyle okumak birim fiyatı
-seçebiliyordu; fiyatlar `div.price-section` elementinden alınır, `span.unit-price`
-bilinçli olarak elenir.
-
-**Sıralama rozetleri temizlenir.** Trendyol ürün adlarının başına "En 5. Ürün",
-"Yetkili Satıcı" gibi etiketler ekler; bunlar ürün adının parçası değildir.
-
-**Kişisel veri toplanmaz.** Yalnızca ürün adı, marka, fiyat ve sıra bilgisi işlenir.
-Kullanıcı profilleri, yorum yazarları veya satıcı kişisel bilgileri kaydedilmez.
-
-**Bayat çıktı uyarılır.** Panel her adımın çıktısını dayandığı adımla karşılaştırır;
-tarama yapıp panoyu yeniden üretmeyi unutursanız uyarır.
+Share of shelf, price index and ranking are computed in plain Python. A number
+that feeds a commercial decision should be auditable, so there is no model
+between the data and the metric. What the tool is good at is applying rules
+consistently — not guessing.
 
 ---
 
-## Bilinen sınırlar
+## Data quality decisions
 
-- **Tek zaman noktası.** Bir tarama anlık fotoğraftır; asıl değer düzenli tekrarla
-  ortaya çıkar. Çıktılar tarih damgalı kaydedilir, trend altyapısı hazırdır.
-- **Arama sonuçları kişiselleştirilebilir.** Konuma ve geçmişe göre değişebilir;
-  taramalar oturumsuz yapılır ama birebir aynı sonuç garanti edilemez.
-- **İlk sayfa ile sınırlıdır.** Bu bilinçli bir tercihtir: alışverişçinin gördüğü
-  raf ilk sayfadır.
-- **Trendyol için Firecrawl gerekir.** Site bot koruması kullandığından doğrudan
-  istek çalışmaz. N11 kanalı ek bir şey istemez, ücretsiz çalışır.
-- **Satış verisiyle ilişkilendirmez.** Raf payı ile gerçek satış arasındaki bağ
-  için şirket içi veri gerekir.
+These are real bugs found and fixed during development, and they are why the
+numbers can be trusted.
+
+**Sponsored placements are separated.** The scrolling carousel blocks on Trendyol
+search pages are bought space, not organic shelf. Left in, share of shelf read
+13%; separated, it read 8.2%. The difference is advertising.
+
+**Prices come from DOM elements.** A card reads
+`649,90 TL ( 5.415,83 TL/kg ) 617,40 TL` — sale price, unit price, member price
+all at once. A regex over the text picked the per-kilogram figure. Prices are now
+read from `div.price-section`, and `span.unit-price` is explicitly excluded.
+
+**Ranking badges are stripped.** Trendyol prefixes product titles with labels
+like "En 5. Ürün" or "Yetkili Satıcı" that are not part of the name.
+
+**No personal data is collected.** Only product name, brand, price and rank.
+No user profiles, no reviewer identities, no seller personal information.
+
+**Stale output is flagged.** The panel compares each step's output against the
+step it depends on and warns when something needs rebuilding.
 
 ---
 
-## Gereksinimler
+## Known limits
+
+- **One point in time.** A scan is a snapshot; the value comes from repeating it.
+  Output is timestamped and the groundwork for trends is in place.
+- **Search results can be personalised.** Scans run without a session, but exact
+  reproducibility is not guaranteed.
+- **First page only.** Deliberate — the first page is the shelf a shopper sees.
+- **Trendyol needs Firecrawl.** The site blocks direct requests. N11 works for free.
+- **No sell-out link.** Connecting shelf share to actual sales needs internal data.
+
+---
+
+## Requirements
 
 - Python 3.9+
 - `requests`, `beautifulsoup4`
-- PDF çıktısı için Chrome veya Edge (sistemde kuruluysa otomatik bulunur)
-- Trendyol kanalı için [Firecrawl CLI](https://firecrawl.dev) (N11 için gerekmez)
+- Chrome or Edge for PDF output (found automatically if installed)
+- [Firecrawl CLI](https://firecrawl.dev) for the Trendyol channel (N11 needs nothing)
 
-## Lisans
+## License
 
-MIT. Ayrıntı için [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE). Security policy: [SECURITY.md](SECURITY.md).
 
 ---
 
-<sub>Bu araç halka açık arama sonuçlarını okur ve yalnızca ürün, marka, fiyat ve
-sıralama bilgisi işler. Kullanımı, hedef sitelerin kullanım koşullarına uygunluk
-sorumluluğu kullanıcıya aittir.</sub>
+<sub>RafRadar reads publicly visible search results and processes only product,
+brand, price and rank information. Ensuring use complies with the terms of the
+sites being queried is the operator's responsibility.</sub>
