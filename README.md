@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Data](https://img.shields.io/badge/Data-Trendyol%20%2B%20N11-f27a1a.svg)](#channels)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#requirements)
+[![tests](https://github.com/FlyerFukas/rafradar/actions/workflows/testler.yml/badge.svg)](https://github.com/FlyerFukas/rafradar/actions/workflows/testler.yml)
 
 **Digital shelf audit for e-commerce search results.** Retail teams measure the
 physical shelf: is the product there, is it at eye level, how much space does it
@@ -23,6 +24,35 @@ printable report and a set of actions derived from the data itself.
 come from configuration, not from code.</sub>
 
 ---
+
+## What it found (example run)
+
+The dashboard above comes from a real scan of a supplement brand across six
+categories — 24 searches, 1,222 products. These are the numbers it produced:
+
+| Category | Share of shelf | Eye level | Who owns the shelf |
+|---|---:|---:|---|
+| Multivitamin | 0.6% | 0/1 | Nutraxin (33 products) |
+| Collagen | 1.1% | 0/2 | Nutraxin (28) |
+| Vitamin D | 3.4% | 1/5 | Ocean (27) |
+| Omega 3 | 4.5% | 0/5 | Ocean (17) |
+| Magnesium | 4.6% | 2/8 | Nutraxin (23) |
+| Vitamin C | 10.3% | 8/18 | Nutraxin (17) |
+
+**Average organic share of shelf: 4.1%.** In three categories the brand has
+products listed but none of them reach the top 10 — a ranking problem, not an
+availability one, and the tool says so explicitly.
+
+The headline the run produced:
+
+> Searching **"solgar"** returns 72 products. Searching **"multivitamin"** returns
+> 36 results with **not a single one** of them from the brand.
+
+That gap is the whole point. The brand is found by people who already know it and
+missed by everyone else — so it defends its customers but cannot win new ones from
+the category.
+
+📄 The full generated report: [`cikti/Solgar-dijital-raf.pdf`](cikti/Solgar-dijital-raf.pdf)
 
 ## What it measures
 
@@ -146,6 +176,7 @@ src/
   marka_vs_kategori.py   Brand search vs category search comparison
   pano.py + sablon.html  Dashboard builder
   panel.py + panel.html  Local control panel
+testler/                 Unit tests (stdlib unittest, no extra tooling)
 yapilandirma/            Brand and category definitions (JSON)
 veri/                    Raw scan output
 cikti/                   Scores, dashboard, PDF
@@ -209,6 +240,11 @@ step it depends on and warns when something needs rebuilding.
 - `requests`, `beautifulsoup4`
 - Chrome or Edge for PDF output (found automatically if installed)
 - [Firecrawl CLI](https://firecrawl.dev) for the Trendyol channel (N11 needs nothing)
+
+## Contributing
+
+New channel adapters are the most useful thing you can add — see
+[CONTRIBUTING.md](CONTRIBUTING.md). Tests run with `python -m unittest discover -s testler`.
 
 ## License
 

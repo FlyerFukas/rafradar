@@ -4,6 +4,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Veri](https://img.shields.io/badge/Veri-Trendyol%20%2B%20N11-f27a1a.svg)](#mimari)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#gereksinimler)
+[![testler](https://github.com/FlyerFukas/rafradar/actions/workflows/testler.yml/badge.svg)](https://github.com/FlyerFukas/rafradar/actions/workflows/testler.yml)
 
 **Bir markanın e-ticaret arama sonuçlarındaki görünürlüğünü ölçen dijital raf denetim aracı.**
 
@@ -26,6 +27,34 @@ rapora dönüştürür.
 Kullanılan marka ve kategoriler yapılandırmadan gelir.</sub>
 
 ---
+
+## Ne buldu (örnek çalıştırma)
+
+Yukarıdaki pano gerçek bir taramadan geliyor: bir takviye markası, altı kategori,
+24 arama, 1.222 ürün. Ürettiği sayılar:
+
+| Kategori | Raf payı | Göz hizası | Rafı alan |
+|---|---:|---:|---|
+| Multivitamin | %0,6 | 0/1 | Nutraxin (33 ürün) |
+| Kolajen | %1,1 | 0/2 | Nutraxin (28) |
+| D Vitamini | %3,4 | 1/5 | Ocean (27) |
+| Omega 3 | %4,5 | 0/5 | Ocean (17) |
+| Magnezyum | %4,6 | 2/8 | Nutraxin (23) |
+| C Vitamini | %10,3 | 8/18 | Nutraxin (17) |
+
+**Ortalama organik raf payı: %4,1.** Üç kategoride markanın ürünü listede var ama
+hiçbiri ilk 10'a giremiyor — bu bir bulunurluk değil sıralama problemi ve araç
+bunu ayrıca söylüyor.
+
+Taramanın ürettiği başlık bulgu:
+
+> **"solgar"** araması 72 ürün getiriyor. **"multivitamin"** araması 36 sonuç
+> getiriyor ve içinde **tek bir tane** marka ürünü yok.
+
+Aradaki fark işin özü: markayı zaten bilen buluyor, bilmeyen bulamıyor. Yani marka
+mevcut müşterisini koruyor ama kategoriden yeni müşteri kazanamıyor.
+
+📄 Üretilen tam rapor: [`cikti/Solgar-dijital-raf.pdf`](cikti/Solgar-dijital-raf.pdf)
 
 ## Ne ölçer
 
@@ -157,6 +186,7 @@ src/
   marka_vs_kategori.py   Marka araması ile kategori aramasının karşılaştırması
   pano.py + sablon.html  HTML pano üreteci
   panel.py + panel.html  Yerel kontrol paneli
+testler/                 Birim testler (stdlib unittest)
 yapilandirma/            Marka ve kategori tanımları (JSON)
 veri/                    Ham tarama çıktıları
 cikti/                   Hesaplanmış skorlar, pano, PDF
@@ -224,6 +254,11 @@ tarama yapıp panoyu yeniden üretmeyi unutursanız uyarır.
 - `requests`, `beautifulsoup4`
 - PDF çıktısı için Chrome veya Edge (sistemde kuruluysa otomatik bulunur)
 - Trendyol kanalı için [Firecrawl CLI](https://firecrawl.dev) (N11 için gerekmez)
+
+## Katkı
+
+En değerli katkı yeni kanal adaptörü; ayrıntı için [CONTRIBUTING.md](CONTRIBUTING.md).
+Testler: `python -m unittest discover -s testler`
 
 ## Lisans
 

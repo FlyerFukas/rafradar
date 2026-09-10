@@ -1,0 +1,51 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.11", "3.13"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+
+      - name: Run test suite
+        run: python -m unittest discover -s testler -p "test_*.py" -v
+
+      - name: Validate example configurations
+        # Her ornek yapilandirma yuklenebilmeli; bozuk bir ornek depoya girmesin
+        run: |
+          for f in yapilandirma/ornek-*.json; do
+            echo "--- $f"
+            RAFRADAR_AYAR="$f" python src/ayarlar.py
+          done
+
+      - name: Check every module imports cleanly
+        # Panel disindaki tum modulleri ice aktar: sozdizimi ve import hatalarini yakalar
+        run: |
+          RAFRADAR_AYAR=yapilandirma/ornek-takviye.json python -c "
+          import sys; sys.path.insert(0, 'src')
+          import ayarlar, kanal_n11, kanal_trendyol, topla, analiz
+          import marka_vs_kategori, pano_veri, panel
+          print('all modules import cleanly')
+          "
