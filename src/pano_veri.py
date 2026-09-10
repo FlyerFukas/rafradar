@@ -16,14 +16,41 @@ from ayarlar import izlenen_marka, kategori_tipi, ad_goster, marka_adi, goz_hiza
 # mevcut ham veri icin gosterim katmaninda temizlenir.
 ROZET = re.compile(r"^(?:En(?:\s+Çok\s+[\wçğıöşüÇĞİÖŞÜ]+(?:\s+[\wçğıöşüÇĞİÖŞÜ]+)?)?\s+\d+\.\s*Ürün\s*)+",
                    re.IGNORECASE)
-EK_ETIKET = ("Süper Fırsat Ürünü", "Yetkili Satıcı", "Çok Al Az Öde",
+EK_ETIKET = ("Süper Fırsat Ürünü", "Başarılı Satıcı", "Yetkili Satıcı", "Çok Al Az Öde",
              "Sepette İndirim", "Kupon Fırsatı")
+
+
+# Trendyol urun adinin SONUNA satis rozeti ekliyor:
+#   "... 30 Tablet 🚀 3 günde 1,7B kişi ekledi! 4.6 ( 3976 )"
+# Bunlar urun adinin parcasi degil; emojiden itibaren kesilir, ayrica
+# emoji kullanilmayan varyantlari da desenle temizlenir.
+EMOJI = re.compile("[🌀-🫿☀-➿⬀-⯿️]")
+KUYRUK = re.compile(
+    r"\s*(?:"
+    r"Son\s+\d+\s+g[üu]n\w*.*"
+    r"|\d+\s*g[üu]nde\s+.*"
+    r"|[\d.,]+\s*B?\s*ki[şs]i\s+.*"
+    r"|\d[.,]\d\s*\(\s*\d+\s*\).*"
+    r")$", re.IGNORECASE)
+
+
+def rozet_kuyrugu_at(ad):
+    """Urun adinin sonundaki satis/populerlik rozetlerini atar."""
+    m = EMOJI.search(ad)
+    if m:
+        ad = ad[:m.start()]
+    onceki = None
+    while onceki != ad:            # birden fazla rozet ust uste gelebiliyor
+        onceki = ad
+        ad = KUYRUK.sub("", ad).strip(" -|·,")
+    return ad.strip()
+
 
 def ad_temizle(ad):
     for e in EK_ETIKET:
         ad = ad.replace(e, " ")
     ad = re.sub(r"\s+", " ", ad).strip()
-    return ROZET.sub("", ad).strip()
+    return rozet_kuyrugu_at(ROZET.sub("", ad).strip())
 
 def uret():
     d = sorted(glob.glob("veri/tarama_coklu_*.json"))

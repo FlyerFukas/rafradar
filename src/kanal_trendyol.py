@@ -13,7 +13,7 @@ import re, subprocess, tempfile, os
 
 KANAL = "trendyol"
 ETIKETLER = ("Hızlı Bakış", "Hızlı Teslimat", "Sponsorlu", "Çok Satan", "Yeni",
-             "Bugün Kargoda", "Trendyol Plus'a Özel", "Süper Fırsat Ürünü",
+             "Bugün Kargoda", "Trendyol Plus'a Özel", "Süper Fırsat Ürünü", "Başarılı Satıcı",
              "Yetkili Satıcı", "Çok Al Az Öde", "Sepette İndirim", "Kupon Fırsatı")
 # Trendyol siralama rozetleri urun adinin basina yapisir:
 # "En 5. Ürün", "En Çok Favorilenen 4. Ürün", "En Çok Ziyaret Edilen 2. Ürün"
@@ -27,11 +27,38 @@ def _sayi(metin):
     try: return float(m.group(1).replace(".", "").replace(",", "."))
     except ValueError: return None
 
+
+# Trendyol urun adinin SONUNA satis rozeti ekliyor:
+#   "... 30 Tablet 🚀 3 günde 1,7B kişi ekledi! 4.6 ( 3976 )"
+# Bunlar urun adinin parcasi degil; emojiden itibaren kesilir, ayrica
+# emoji kullanilmayan varyantlari da desenle temizlenir.
+EMOJI = re.compile("[🌀-🫿☀-➿⬀-⯿️]")
+KUYRUK = re.compile(
+    r"\s*(?:"
+    r"Son\s+\d+\s+g[üu]n\w*.*"
+    r"|\d+\s*g[üu]nde\s+.*"
+    r"|[\d.,]+\s*B?\s*ki[şs]i\s+.*"
+    r"|\d[.,]\d\s*\(\s*\d+\s*\).*"
+    r")$", re.IGNORECASE)
+
+
+def rozet_kuyrugu_at(ad):
+    """Urun adinin sonundaki satis/populerlik rozetlerini atar."""
+    m = EMOJI.search(ad)
+    if m:
+        ad = ad[:m.start()]
+    onceki = None
+    while onceki != ad:            # birden fazla rozet ust uste gelebiliyor
+        onceki = ad
+        ad = KUYRUK.sub("", ad).strip(" -|·,")
+    return ad.strip()
+
+
 def _temizle(metin):
     for e in ETIKETLER: metin = metin.replace(e, " ")
     metin = re.sub(r"[\d.]+,\d{2}\s*TL", " ", metin)
     metin = re.sub(r"\s+", " ", metin).strip()
-    return ROZET.sub("", metin).strip()
+    return rozet_kuyrugu_at(ROZET.sub("", metin).strip())
 
 def _slider_mi(dugum, derinlik=8):
     """Kart bir marka vitrini/carousel icinde mi? -> organik raf degil."""

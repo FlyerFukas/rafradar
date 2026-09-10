@@ -56,6 +56,12 @@ mevcut müşterisini koruyor ama kategoriden yeni müşteri kazanamıyor.
 
 📄 Üretilen tam rapor: [`cikti/Solgar-dijital-raf.pdf`](cikti/Solgar-dijital-raf.pdf)
 
+Panonun içinde özetin dayandığı veri de var. Kategori ve arama kelimesi seçince o
+aramada alışverişçinin gördüğü sıralamayı olduğu gibi görüyorsunuz; izlenen markanın
+ürünleri işaretli ve metrikler seçime göre yeniden hesaplanıyor.
+
+![Gezilebilir veri katmanı](gorseller/kesif.png)
+
 ## Ne ölçer
 
 | Metrik | Karşılığı |

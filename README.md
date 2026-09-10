@@ -54,6 +54,12 @@ the category.
 
 📄 The full generated report: [`cikti/Solgar-dijital-raf.pdf`](cikti/Solgar-dijital-raf.pdf)
 
+Beyond the summary, the dashboard ships the underlying data. Pick a category and a
+search term and you see the ranking exactly as a shopper would, with the tracked
+brand's products marked and the metrics recalculating for that selection.
+
+![Explorable data layer](gorseller/kesif.png)
+
 ## What it measures
 
 | Metric | Retail equivalent |

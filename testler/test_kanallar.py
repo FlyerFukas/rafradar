@@ -35,6 +35,26 @@ class BaslikTemizligiTesti(unittest.TestCase):
         ham = "En 3. Ürün Yetkili Satıcı Hızlı Teslimat Alfa Krem 100 ml 249,90 TL"
         self.assertEqual(ty._temizle(ham), "Alfa Krem 100 ml")
 
+
+    def test_emoji_sonrasi_satis_rozeti_atilir(self):
+        # "... 30 Tablet 🚀 3 günde 1,3B kişi ekledi! 4.6 ( 3976 )"
+        ham = "Ocean Orzax Vitamin C 1000 mg 30 Tablet 🚀 3 günde 1,3B kişi ekledi! 4.6 ( 3976 )"
+        self.assertEqual(ty._temizle(ham), "Ocean Orzax Vitamin C 1000 mg 30 Tablet")
+
+    def test_favori_rozeti_atilir(self):
+        ham = "Aromel C Vitamini 100 Şase Askorbik Asit ❤️ 7,6B kişi favoriledi!"
+        self.assertEqual(ty._temizle(ham), "Aromel C Vitamini 100 Şase Askorbik Asit")
+
+    def test_basarili_satici_oneki_adi_silmez(self):
+        # "Başarılı Satıcı" adin BASINDA gecer; kuyruk deseni sanilirsa
+        # tum urun adi silinir. Regresyon testi.
+        self.assertEqual(ty._temizle("Başarılı Satıcı One Up C Vitamini 60 Tablet"),
+                         "One Up C Vitamini 60 Tablet")
+
+    def test_onek_ve_kuyruk_birlikte(self):
+        ham = "Yetkili Satıcı Nutraxin C Vitamin 1000 Mg 3 günde 1,7B kişi ekledi"
+        self.assertEqual(ty._temizle(ham), "Nutraxin C Vitamin 1000 Mg")
+
     def test_normal_baslik_bozulmaz(self):
         self.assertEqual(ty._temizle("Alfa Yoğun Nemlendirici 400 ML"),
                          "Alfa Yoğun Nemlendirici 400 ML")
