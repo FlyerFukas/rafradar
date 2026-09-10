@@ -1,0 +1,475 @@
+<title>__MARKA__ · Dijital Raf</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{
+  --zemin:#f6f8fa; --kart:#ffffff; --murekkep:#0e1b24; --murekkep-2:#3d5163;
+  --murekkep-3:#74899b; --cizgi:#dfe7ed; --vurgu:#0d8fa3; --vurgu-yumusak:#e4f2f5;
+  --uyari:#be4a2e; --uyari-yumusak:#fbeae5; --raf-bos:#e7edf2; --iyi:#2f7d5c;
+  --baslik:'Archivo',system-ui,sans-serif; --govde:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --zemin:#10171d; --kart:#17212a; --murekkep:#e8eff4; --murekkep-2:#a9bcc9;
+    --murekkep-3:#718897; --cizgi:#26343f; --vurgu:#12a2b7; --vurgu-yumusak:#12313a;
+    --uyari:#d2694f; --uyari-yumusak:#3a2119; --raf-bos:#223039; --iyi:#4aa87f;
+  }
+}
+:root[data-theme="dark"]{
+  --zemin:#10171d; --kart:#17212a; --murekkep:#e8eff4; --murekkep-2:#a9bcc9;
+  --murekkep-3:#718897; --cizgi:#26343f; --vurgu:#12a2b7; --vurgu-yumusak:#12313a;
+  --uyari:#d2694f; --uyari-yumusak:#3a2119; --raf-bos:#223039; --iyi:#4aa87f;
+}
+*{box-sizing:border-box}
+body{background:var(--zemin);color:var(--murekkep);font-family:var(--govde);
+  line-height:1.55;-webkit-font-smoothing:antialiased}
+.sayfa{max-width:1060px;margin:0 auto;padding:48px 24px 80px}
+h1,h2,h3{font-family:var(--baslik);letter-spacing:-.025em;margin:0}
+.ust{border-bottom:2px solid var(--murekkep);padding-bottom:22px;margin-bottom:34px}
+.etiket{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--vurgu);font-weight:600;margin-bottom:10px}
+h1{font-size:clamp(42px,7vw,68px);font-weight:800;line-height:.95}
+.alt-baslik{font-size:17px;color:var(--murekkep-2);margin-top:14px;max-width:62ch}
+.meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:20px;font-family:var(--mono);
+  font-size:11.5px;color:var(--murekkep-3)}
+.meta b{color:var(--murekkep-2);font-weight:600}
+
+.bulgu{background:var(--murekkep);color:var(--zemin);border-radius:6px;padding:34px 32px;margin-bottom:40px}
+.bulgu .etiket{color:#7fd4e2}
+.bulgu p{font-family:var(--baslik);font-size:clamp(20px,3vw,27px);font-weight:600;
+  line-height:1.32;margin:0 0 26px;letter-spacing:-.02em}
+.bulgu p em{font-style:normal;color:#7fd4e2}
+.kiyas{display:flex;gap:14px;flex-wrap:wrap}
+.kiyas-kutu{flex:1 1 190px;background:rgba(255,255,255,.07);border-radius:4px;padding:16px 18px}
+.kiyas-kutu code{font-family:var(--mono);font-size:12px;color:#9fc5d2;display:block;margin-bottom:8px}
+.kiyas-kutu .rakam{font-family:var(--baslik);font-size:44px;font-weight:800;line-height:1}
+.kiyas-kutu small{display:block;margin-top:5px;font-size:12px;opacity:.72}
+.kiyas-kutu.sifir .rakam{color:#f0917a}
+
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:12px;margin-bottom:44px}
+.kpi div{background:var(--kart);border:1px solid var(--cizgi);border-radius:5px;padding:16px 18px}
+.kpi .rakam{font-family:var(--baslik);font-size:31px;font-weight:700;line-height:1.05}
+.kpi .ad{font-size:12px;color:var(--murekkep-3);margin-top:6px;line-height:1.35}
+.kpi .rakam.dusuk{color:var(--uyari)}
+
+.bolum{margin-bottom:46px}
+.bolum > h2{font-size:23px;font-weight:700;margin-bottom:6px}
+.bolum > .aciklama{color:var(--murekkep-2);font-size:14.5px;margin:0 0 20px;max-width:68ch}
+.kutu{background:var(--kart);border:1px solid var(--cizgi);border-radius:6px;padding:24px}
+
+.tablo-sar{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:660px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--cizgi)}
+thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--murekkep-3);font-weight:600;border-bottom:1.5px solid var(--murekkep-3)}
+tbody th{font-weight:600;color:var(--murekkep)}
+td.sayi{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+td.vurgulu{font-weight:600;color:var(--vurgu)}
+td.kotu{color:var(--uyari);font-weight:600}
+td.yuksek{color:var(--uyari)}
+.ufak{color:var(--murekkep-3);font-size:11.5px}
+.rozet{display:inline-block;font-family:var(--mono);font-size:10.5px;padding:3px 8px;border-radius:3px;
+  font-weight:600;letter-spacing:.03em;white-space:nowrap}
+.rozet.kritik{background:var(--uyari-yumusak);color:var(--uyari)}
+.rozet.izle{background:var(--raf-bos);color:var(--murekkep-2)}
+.rozet.iyi{background:var(--vurgu-yumusak);color:var(--vurgu)}
+
+.efsane{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:16px;font-size:12.5px;color:var(--murekkep-2)}
+.efsane span{display:flex;align-items:center;gap:7px}
+.nokta{width:11px;height:11px;border-radius:2px;display:inline-block}
+
+.tuzak{border:1px solid var(--cizgi);border-radius:5px;padding:18px 20px;margin-bottom:12px;background:var(--kart)}
+.tuzak-kat{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--murekkep-3);margin-bottom:12px;font-weight:600}
+.tuzak-cift{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.tuzak-yan{flex:1 1 170px}
+.tuzak-yan code{font-family:var(--mono);font-size:12.5px;display:block;margin-bottom:6px;color:var(--murekkep-2)}
+.tuzak-yan strong{font-family:var(--baslik);font-size:30px;font-weight:700;display:block;line-height:1}
+.tuzak-yan span{font-size:11.5px;color:var(--murekkep-3);font-family:var(--mono)}
+.kotu-yan strong{color:var(--uyari)}
+.iyi-yan strong{color:var(--vurgu)}
+.tuzak-ok{color:var(--murekkep-3);font-size:22px}
+.tuzak-fark{margin-top:12px;padding-top:11px;border-top:1px dashed var(--cizgi);
+  font-size:12.5px;color:var(--murekkep-2);font-family:var(--mono)}
+
+.aksiyon{counter-reset:a;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.aksiyon li{background:var(--kart);border:1px solid var(--cizgi);border-left:3px solid var(--vurgu);
+  border-radius:5px;padding:18px 20px 18px 22px;counter-increment:a}
+.aksiyon li::before{content:counter(a);font-family:var(--mono);font-size:11px;font-weight:600;
+  color:var(--vurgu);display:block;margin-bottom:7px}
+.aksiyon strong{display:block;font-family:var(--baslik);font-size:16px;font-weight:600;margin-bottom:5px}
+.aksiyon p{margin:0;font-size:14px;color:var(--murekkep-2)}
+.aksiyon .kanit{margin-top:9px;font-family:var(--mono);font-size:11.5px;color:var(--murekkep-3);
+  padding-top:9px;border-top:1px dashed var(--cizgi)}
+
+.yontem{display:grid;gap:14px}
+.yontem-madde{padding-left:16px;border-left:2px solid var(--cizgi)}
+.yontem-madde b{display:block;font-size:14.5px;margin-bottom:3px}
+.yontem-madde p{margin:0;font-size:13.5px;color:var(--murekkep-2)}
+.bos{color:var(--murekkep-3);font-size:13.5px;font-style:italic}
+
+footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--cizgi);
+  font-size:12px;color:var(--murekkep-3);line-height:1.65}
+footer b{color:var(--murekkep-2)}
+/* --- Gezilebilir kesif katmani --- */
+.secim{display:grid;gap:11px;margin-bottom:20px}
+.secim-satir{display:flex;gap:11px;align-items:baseline;flex-wrap:wrap}
+.secim-etiket{font-family:var(--mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--murekkep-3);font-weight:600;min-width:66px;flex-shrink:0}
+.butonlar{display:flex;gap:6px;flex-wrap:wrap}
+.btn{font-family:var(--govde);font-size:12.5px;padding:5px 11px;border-radius:4px;cursor:pointer;
+  border:1px solid var(--cizgi);background:var(--zemin);color:var(--murekkep-2);
+  transition:background .12s,border-color .12s,color .12s;line-height:1.3}
+.btn:hover{border-color:var(--vurgu);color:var(--vurgu)}
+.btn[aria-pressed="true"]{background:var(--vurgu);border-color:var(--vurgu);color:#fff;font-weight:600}
+.btn:focus-visible{outline:2px solid var(--vurgu);outline-offset:2px}
+.mini-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:9px;
+  margin-bottom:18px;padding:15px;background:var(--zemin);border-radius:5px}
+.mini-kpi div{text-align:center}
+.mini-kpi .r{font-family:var(--baslik);font-size:24px;font-weight:700;line-height:1.1}
+.mini-kpi .a{font-size:10.5px;color:var(--murekkep-3);margin-top:3px;line-height:1.3}
+.mini-kpi .r.vurgu{color:var(--vurgu)} .mini-kpi .r.uyari{color:var(--uyari)}
+#kesif-tablo td{padding:7px 10px;font-size:12.5px}
+#kesif-tablo tr.izlenen{background:var(--vurgu-yumusak)}
+#kesif-tablo tr.izlenen td:first-child{box-shadow:inset 3px 0 0 var(--vurgu)}
+#kesif-tablo tr.sponsor{opacity:.62}
+#kesif-tablo .mrk{font-weight:600}
+#kesif-tablo tr.izlenen .mrk{color:var(--vurgu)}
+.etiket-kucuk{font-family:var(--mono);font-size:9.5px;padding:1px 5px;border-radius:3px;
+  background:var(--raf-bos);color:var(--murekkep-3);margin-left:5px;white-space:nowrap}
+.kesif-not{font-size:12px;color:var(--murekkep-3);margin-top:12px;line-height:1.5}
+.akis{display:grid;gap:0;margin:0}
+.akis-adim{display:grid;grid-template-columns:26px 1fr;gap:13px;padding:13px 0;
+  border-bottom:1px solid var(--cizgi)}
+.akis-adim:last-child{border-bottom:0}
+.akis-no{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--vurgu);
+  background:var(--vurgu-yumusak);border-radius:50%;width:26px;height:26px;
+  display:flex;align-items:center;justify-content:center}
+.akis-icerik code{font-family:var(--mono);font-size:12.5px;background:var(--zemin);
+  padding:2px 7px;border-radius:3px;color:var(--murekkep);display:inline-block;margin-bottom:5px}
+.akis-icerik p{margin:0;font-size:13.5px;color:var(--murekkep-2)}
+.akis-cikti{font-family:var(--mono);font-size:11.5px;color:var(--murekkep-3);margin-top:5px}
+
+@media(max-width:640px){.sayfa{padding:32px 16px 60px}.bulgu{padding:24px 20px}
+  .secim-satir{flex-direction:column;gap:6px}.secim-etiket{min-width:0}}
+
+/* --- Baski / PDF --- */
+@media print{
+  /* Tarayici arka plan renklerini varsayilan olarak basmaz; bulgu blogu ve
+     rozetler renksiz kalirdi. */
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  @page{margin:14mm 12mm}
+  body{background:#fff}
+  .sayfa{max-width:none;padding:0}
+  h1{font-size:46px}
+  .bulgu p{font-size:21px}
+  .kiyas-kutu .rakam{font-size:36px}
+  /* bolumler ve kartlar sayfa ortasindan bolunmesin */
+  .bolum,.kutu,.bulgu,.tuzak,.aksiyon li,.yontem-madde{break-inside:avoid;page-break-inside:avoid}
+  .bolum > h2{break-after:avoid;page-break-after:avoid}
+  table{font-size:11.5px;min-width:0}
+  .tablo-sar{overflow:visible}
+  footer{break-inside:avoid}
+  /* Gezilebilir katman ekrana ozel: baskida butonlar anlamsiz kalir */
+  #kesif{display:none}
+}
+</style>
+
+<div class="sayfa">
+<header class="ust">
+  <div class="etiket">Dijital Raf Denetimi &middot; __PAZAR__</div>
+  <h1>__MARKA__</h1>
+  <p class="alt-baslik">Fiziksel rafta g&ouml;z hizası neyse, dijital rafta ilk sayfa odur. Markalar fiziksel
+     rafı &ouml;l&ccedil;er; alışverişçinin g&ouml;rd&uuml;ğ&uuml; online rafı &ccedil;oğu zaman kimse &ouml;l&ccedil;mez.
+     Bu ara&ccedil; onu &ouml;l&ccedil;er.</p>
+  <div class="meta">
+    <span>Tarama: <b>__TARIH__</b></span>
+    <span>Kanal: <b>Trendyol + N11</b></span>
+    <span>Arama: <b>__ARAMA__</b></span>
+    <span>Organik &uuml;r&uuml;n: <b>__TOPLAM_URUN__</b></span>
+    __META_HAZIRLAYAN__
+  </div>
+</header>
+
+__BASLIK_BULGU__
+
+<div class="kpi">
+  <div><div class="rakam dusuk">%__ORT_PAY__</div><div class="ad">Ortalama organik<br>dijital raf payı</div></div>
+  <div><div class="rakam">__KAT_SAYI__</div><div class="ad">Rekabete a&ccedil;ık<br>kategori</div></div>
+  <div><div class="rakam dusuk">__SIFIR_SAYI__</div><div class="ad">Bulunurluğu sıfır<br>kategori</div></div>
+  <div><div class="rakam">__TOPLAM_URUN__</div><div class="ad">Analiz edilen<br>organik &uuml;r&uuml;n</div></div>
+  <div><div class="rakam">__ARAMA__</div><div class="ad">Y&uuml;r&uuml;t&uuml;len<br>arama</div></div>
+</div>
+
+<section class="bolum">
+  <h2>Kategori bazlı dijital raf payı</h2>
+  <p class="aciklama">Her &ccedil;ubuk bir kategorinin organik arama sonu&ccedil;larındaki __MARKA__ payını
+     g&ouml;steriyor. Sponsorlu ve vitrin yerleşimleri hari&ccedil;; yani alışverişçinin parayla değil,
+     alakayla karşısına &ccedil;ıkan raf.</p>
+  <div class="kutu">__RAF_GRAFIK__</div>
+</section>
+
+<section class="bolum">
+  <h2>Skor kartı</h2>
+  <p class="aciklama">Perfect Store metodolojisinin dijital karşılığı: bulunurluk, g&ouml;r&uuml;n&uuml;rl&uuml;k,
+     raf payı ve fiyat uyumu. <b>G&ouml;z hizası</b> s&uuml;tunu, __MARKA__ &uuml;r&uuml;nlerinden ka&ccedil;ının ilk __GOZ__
+     organik sonu&ccedil;ta olduğunu s&ouml;yl&uuml;yor. <b>Fiyat endeksi</b> 1,0&rsquo;ın &uuml;st&uuml;ndeyse __MARKA__ kategori
+     medyanından pahalı.</p>
+  <div class="kutu tablo-sar">
+    <table>
+      <thead><tr><th>Kategori</th><th>Organik pay</th><th>N11</th><th>Trendyol</th>
+        <th>G&ouml;z hizası</th><th>Fiyat endeksi</th><th>Rafı alan rakip</th><th>Durum</th></tr></thead>
+      <tbody>__KATEGORI_SATIRLARI__</tbody>
+    </table>
+  </div>
+</section>
+
+<section class="bolum">
+  <h2>Marka araması mı, kategori araması mı?</h2>
+  <p class="aciklama">Aynı markanın iki farklı arama davranışındaki g&ouml;r&uuml;n&uuml;rl&uuml;ğ&uuml;. Marka adıyla
+     arayan alışverişçi &uuml;r&uuml;n&uuml; buluyor; kategori adıyla arayan (yani markayı hen&uuml;z se&ccedil;memiş,
+     kazanılabilir alışverişçi) bulamıyor.</p>
+  <div class="kutu">
+    <div class="efsane">
+      <span><i class="nokta" style="background:var(--vurgu)"></i> Marka adıyla arama</span>
+      <span><i class="nokta" style="background:var(--uyari)"></i> Kategori adıyla arama</span>
+    </div>
+    __MVK_GRAFIK__
+  </div>
+</section>
+
+<section class="bolum">
+  <h2>Arama kelimesi tuzağı</h2>
+  <p class="aciklama">Aynı kategori, farklı kelime, bambaşka sonu&ccedil;. &Uuml;r&uuml;n başlıkları hangi
+     kelimeyi taşıyorsa o aramada g&ouml;r&uuml;n&uuml;yor.</p>
+  __TUZAKLAR__
+</section>
+
+<section class="bolum">
+  <h2>Reklam baskısı: vitrin yerleşimleri</h2>
+  <p class="aciklama">Arama sayfalarındaki kaydırmalı vitrin blokları organik raf değil,
+     satın alınan alandır. Bu alanı kimin aldığı, rakiplerin retail media yatırımını g&ouml;sterir.</p>
+  <div class="kutu tablo-sar">
+    <table>
+      <thead><tr><th>Kategori</th><th>Vitrin kartı</th><th>__MARKA__</th><th>Alanı alan markalar</th></tr></thead>
+      <tbody>__VITRIN_SATIRLARI__</tbody>
+    </table>
+  </div>
+</section>
+
+<section class="bolum">
+  <h2>Ne yapılmalı</h2>
+  <p class="aciklama">Bu maddeler elle yazılmadı; taramanın kendisinden &uuml;retildi. Her birinin altında hangi &ouml;l&ccedil;&uuml;mden &ccedil;ıktığı yazılı.</p>
+  <ol class="aksiyon">__AKSIYONLAR__</ol>
+</section>
+
+<section class="bolum" id="kesif">
+  <h2>Veriyi kendiniz gezin</h2>
+  <p class="aciklama">Yukarıdaki b&uuml;t&uuml;n sayılar bu tablodan hesaplandı. Kategori ve arama
+     kelimesi se&ccedil;in; o aramada alışverişçiʼın g&ouml;rd&uuml;ğ&uuml; sıralamayı oldu&#287;u gibi g&ouml;r&uuml;n.
+     __MARKA__ &uuml;r&uuml;nleri işaretli.</p>
+  <div class="kutu">
+    <div class="secim">
+      <div class="secim-satir"><span class="secim-etiket">Kategori</span>
+        <div class="butonlar" id="kat-btn"></div></div>
+      <div class="secim-satir"><span class="secim-etiket">Arama</span>
+        <div class="butonlar" id="arama-btn"></div></div>
+      <div class="secim-satir"><span class="secim-etiket">Kanal</span>
+        <div class="butonlar" id="kanal-btn"></div></div>
+      <div class="secim-satir"><span class="secim-etiket">Vitrin</span>
+        <div class="butonlar" id="vitrin-btn"></div></div>
+    </div>
+    <div class="mini-kpi" id="kesif-kpi"></div>
+    <div class="tablo-sar">
+      <table id="kesif-tablo">
+        <thead><tr><th>Sıra</th><th>Marka</th><th>&Uuml;r&uuml;n</th><th>Fiyat</th></tr></thead>
+        <tbody id="kesif-satirlar"></tbody>
+      </table>
+    </div>
+    <p class="kesif-not" id="kesif-not"></p>
+  </div>
+</section>
+
+<section class="bolum">
+  <h2>Sistem nasıl &ccedil;alışıyor</h2>
+  <p class="aciklama">D&ouml;rt komut, sırayla. Her biri bir dosya &uuml;retir, sonraki onu okur.
+     Rapor elle hazırlanmaz; veri değiştiğinde bu zincir yeniden &ccedil;alıştırılır ve
+     pano kendini yeniden yazar.</p>
+  <div class="kutu akis">
+    <div class="akis-adim"><div class="akis-no">1</div><div class="akis-icerik">
+      <code>py src/topla.py</code>
+      <p>Trendyol ve N11ʼde 42 arama y&uuml;r&uuml;t&uuml;r, her &uuml;r&uuml;n&uuml;n markasını, fiyatını ve
+         ka&ccedil;ıncı sırada &ccedil;ıktığını kaydeder. Yaklaşık 7 dakika.</p>
+      <div class="akis-cikti">&#8595; veri/tarama_coklu_TARIH.json &nbsp;·&nbsp; 1.151 KB &nbsp;·&nbsp; 2.081 &uuml;r&uuml;n</div>
+    </div></div>
+    <div class="akis-adim"><div class="akis-no">2</div><div class="akis-icerik">
+      <code>py src/analiz.py</code>
+      <p>Ruhsatlı ila&ccedil;ları analiz dışında bırakır, vitrin yerleşimlerini organik
+         sonu&ccedil;tan ayırır, d&ouml;rt metriği hesaplar.</p>
+      <div class="akis-cikti">&#8595; cikti/skor_TARIH.json &nbsp;·&nbsp; 46 KB</div>
+    </div></div>
+    <div class="akis-adim"><div class="akis-no">3</div><div class="akis-icerik">
+      <code>py src/pano.py</code>
+      <p>Hesaplanan skorları HTML şablonuna yerleştirir. Grafiklerin uzunlukları da
+         koddan &uuml;retilir, elle &ccedil;izilmez.</p>
+      <div class="akis-cikti">&#8595; cikti/pano.html &nbsp;·&nbsp; şu an okuduğunuz sayfa</div>
+    </div></div>
+    <div class="akis-adim"><div class="akis-no">4</div><div class="akis-icerik">
+      <code>chrome --headless --print-to-pdf</code>
+      <p>Aynı sayfadan baskıya uygun rapor ve g&ouml;rseller &uuml;retilir.</p>
+      <div class="akis-cikti">&#8595; cikti/Goz-Hizasi-Rapor.pdf &nbsp;·&nbsp; 473 KB</div>
+    </div></div>
+  </div>
+</section>
+
+<section class="bolum">
+  <h2>Y&ouml;ntem ve veri kalitesi</h2>
+  <div class="kutu yontem">
+    <div class="yontem-madde"><b>Veri kaynağı</b>
+      <p>Trendyol ve N11&rsquo;in halka a&ccedil;ık arama sonu&ccedil;ları. Trendyol Firecrawl ile T&uuml;rkiye
+         geo-hedeflemesi kullanılarak, N11 doğrudan JSON-LD &uuml;zerinden. Kişisel veri
+         toplanmadı; yalnızca &uuml;r&uuml;n, marka, fiyat ve sıralama bilgisi işlendi.</p></div>
+    <div class="yontem-madde"><b>Mevzuat ayrımı yapıldı</b>
+      <p>T&uuml;rkiye&rsquo;de ruhsatlı beşeri tıbbi &uuml;r&uuml;n&uuml;n internetten satışı yasaktır. Aspirin,
+         Canesten, Rennie, Iberogast ve Elevit Pronatal bu kapsamda; online rafta
+         g&ouml;r&uuml;nmemeleri beklenen durumdur, eksiklik değildir. Bu markalar analiz dışında
+         tutuldu. Elevit&rsquo;in ila&ccedil; stat&uuml;s&uuml; İla&ccedil; Rehberi, Vademecum ve İla&ccedil;abak
+         kayıtlarından doğrulandı.</p></div>
+    <div class="yontem-madde"><b>Sponsorlu yerleşim ayrıştırıldı</b>
+      <p>Arama sayfalarındaki kaydırmalı vitrin blokları organik sonu&ccedil; değildir. Ayrıştırılmasaydı
+         raf payı yapay olarak y&uuml;ksek &ccedil;ıkardı; ayrı metrik olarak raporlandı.</p></div>
+    <div class="yontem-madde"><b>Fiyat okuma doğrulandı</b>
+      <p>&Uuml;r&uuml;n kartı metninde satış fiyatı, &uuml;st&uuml; &ccedil;izili liste fiyatı ve birim fiyat (TL/kg)
+         birlikte ge&ccedil;iyor; metin &uuml;zerinden d&uuml;zenli ifadeyle okumak yanlış değer &uuml;retiyordu.
+         Fiyatlar HTML element d&uuml;zeyinden okunuyor, birim fiyat alanı bilin&ccedil;li olarak eleniyor.</p></div>
+    <div class="yontem-madde"><b>Metrikler deterministik</b>
+      <p>Raf payı, g&ouml;z hizası ve fiyat endeksi saf Python ile hesaplanır; dil modeli
+         kullanılmaz. Bir trade marketing kararına girecek sayının uydurulma ihtimali olmamalıdır.</p></div>
+  </div>
+</section>
+
+<footer>
+  <b>RafRadar</b> ile &uuml;retilmiş bağımsız bir dijital raf &ouml;l&ccedil;&uuml;m&uuml;d&uuml;r.
+  __MARKA__ ile ticari bir ilişkisi yoktur, kurumsal veri i&ccedil;ermez. T&uuml;m bulgular
+  halka a&ccedil;ık e-ticaret arama sonu&ccedil;larından &uuml;retilmiştir ve tarama anındaki durumu
+  yansıtır; arama sonu&ccedil;ları zamana ve konuma g&ouml;re değişebilir.<br>
+  __HAZIRLAYAN__Tarama: __TARIH__ &middot; Kaynak: github.com/mrFurkan33333/rafradar
+</footer>
+</div>
+
+<script type="application/json" id="kesif-veri">__KESIF_VERISI__</script>
+<script>
+(function(){
+  var kok = document.getElementById("kesif-veri");
+  if(!kok) return;
+  var HAM, VERI, MARKA, GOZ;
+  try {
+    HAM = JSON.parse(kok.textContent);
+    VERI = HAM.kategoriler; MARKA = HAM.marka || "İzlenen marka"; GOZ = HAM.goz_hizasi || 10;
+  } catch(e){ return; }
+  var katlar = Object.keys(VERI);
+  if(!katlar.length) return;
+
+  // urun dizisi: [sira, marka, ad, fiyat, izlenenMarka, sponsorlu, kanal]
+  var S = { kat: katlar[0], arama: null, kanal: "hepsi", vitrin: false };
+  var KANAL_AD = { n: "N11", t: "Trendyol" };
+
+  function tl(x){
+    if(x == null) return "-";
+    return x.toLocaleString("tr-TR", {minimumFractionDigits:2, maximumFractionDigits:2}) + " TL";
+  }
+  function yuzde(x){ return "%" + x.toFixed(1).replace(".", ","); }
+
+  function butonYap(kap, secenekler, aktifDeger, secildi){
+    kap.textContent = "";
+    secenekler.forEach(function(o){
+      var b = document.createElement("button");
+      b.className = "btn";
+      b.type = "button";
+      b.textContent = o.etiket;
+      b.setAttribute("aria-pressed", String(o.deger === aktifDeger));
+      b.addEventListener("click", function(){ secildi(o.deger); });
+      kap.appendChild(b);
+    });
+  }
+
+  function suankiKayitlar(){
+    var aramalar = VERI[S.kat] || {};
+    var liste = aramalar[S.arama] || [];
+    return liste.filter(function(u){
+      if(!S.vitrin && u[5]) return false;
+      if(S.kanal !== "hepsi" && u[6] !== S.kanal) return false;
+      return true;
+    });
+  }
+
+  function ciz(){
+    var aramalar = Object.keys(VERI[S.kat] || {});
+    if(aramalar.indexOf(S.arama) === -1) S.arama = aramalar[0];
+
+    butonYap(document.getElementById("kat-btn"),
+      katlar.map(function(k){ return {etiket:k, deger:k}; }), S.kat,
+      function(v){ S.kat = v; S.arama = null; ciz(); });
+
+    butonYap(document.getElementById("arama-btn"),
+      aramalar.map(function(a){ return {etiket:"“"+a+"”", deger:a}; }), S.arama,
+      function(v){ S.arama = v; ciz(); });
+
+    butonYap(document.getElementById("kanal-btn"), [
+      {etiket:"Her ikisi", deger:"hepsi"},
+      {etiket:"Trendyol", deger:"t"},
+      {etiket:"N11", deger:"n"}], S.kanal,
+      function(v){ S.kanal = v; ciz(); });
+
+    butonYap(document.getElementById("vitrin-btn"), [
+      {etiket:"Sadece organik", deger:false},
+      {etiket:"Vitrin dahil", deger:true}], S.vitrin,
+      function(v){ S.vitrin = v; ciz(); });
+
+    var kayitlar = suankiKayitlar();
+    var organik = kayitlar.filter(function(u){ return !u[5]; });
+    var izlenen = organik.filter(function(u){ return u[4]; });
+    var gozHizasi = izlenen.filter(function(u){ return u[0] <= GOZ; }).length;
+    var pay = organik.length ? 100 * izlenen.length / organik.length : 0;
+
+    var kpi = document.getElementById("kesif-kpi");
+    kpi.innerHTML =
+      '<div><div class="r">' + kayitlar.length + '</div><div class="a">listelenen ürün</div></div>' +
+      '<div><div class="r ' + (izlenen.length ? "vurgu" : "uyari") + '">' + izlenen.length +
+        '</div><div class="a">' + MARKA + ' ürünü</div></div>' +
+      '<div><div class="r ' + (pay < 5 ? "uyari" : "vurgu") + '">' + yuzde(pay) +
+        '</div><div class="a">organik raf payı</div></div>' +
+      '<div><div class="r ' + (gozHizasi ? "vurgu" : "uyari") + '">' + gozHizasi +
+        '</div><div class="a">ilk 10 sonuçta</div></div>';
+
+    var govde = document.getElementById("kesif-satirlar");
+    govde.textContent = "";
+    if(!kayitlar.length){
+      var bos = document.createElement("tr");
+      bos.innerHTML = '<td colspan="4" class="bos">Bu filtrede ürün yok.</td>';
+      govde.appendChild(bos);
+    }
+    kayitlar.forEach(function(u){
+      var tr = document.createElement("tr");
+      if(u[4]) tr.className = "izlenen";
+      if(u[5]) tr.className += " sponsor";
+      var rozet = u[5] ? '<span class="etiket-kucuk">vitrin</span>' : "";
+      var kanalRozet = '<span class="etiket-kucuk">' + (KANAL_AD[u[6]] || u[6]) + '</span>';
+      tr.innerHTML =
+        '<td class="sayi">' + (u[5] ? "-" : u[0]) + '</td>' +
+        '<td class="mrk">' + (u[1] || "-") + rozet + '</td>' +
+        '<td>' + u[2] + kanalRozet + '</td>' +
+        '<td class="sayi">' + tl(u[3]) + '</td>';
+      govde.appendChild(tr);
+    });
+
+    var sifir = izlenen.length === 0;
+    document.getElementById("kesif-not").textContent = sifir
+      ? "Bu aramada hiç " + MARKA + " ürünü yok. Alışverişçi bu kelimeyi yazdığında markayı göremiyor."
+      : MARKA + " ürünleri işaretli. Sıra numarası, o aramada kaçıncı organik sonuç "
+        + "olduğunu gösterir; ilk " + GOZ + " dijital göz hizası sayılır.";
+  }
+  ciz();
+})();
+</script>

@@ -1,0 +1,45 @@
+{
+  "ad": "Örnek Tüketici Sağlığı Şirketi",
+  "pazar": "Türkiye",
+  "hazirlayan": "",
+  "kanallar": ["n11", "trendyol"],
+  "goz_hizasi": 10,
+
+  "_not": "Bu örnek, 'haric_markalar' özelliğini gösterir. Türkiye'de ruhsatlı beşeri tıbbi ürünlerin internetten satışı yasaktır; bu ürünlerin online rafta görünmemesi bir eksiklik değil, mevzuat gereğidir. Analize dahil edilirlerse ortalama raf payı yapay olarak düşük çıkar. Markalarınızı kendi portföyünüze göre değiştirin.",
+
+  "markalar": {
+    "Bioderma": ["bioderma"],
+    "La Roche-Posay": ["la roche", "laroche", "roche-posay"]
+  },
+
+  "haric_markalar": {
+    "Reçeteli Ürünler": {
+      "anahtarlar": ["reçete ile", "reçeteli"],
+      "sebep": "Ruhsatlı beşeri tıbbi ürün; internetten satışı mevzuat gereği yasaktır"
+    }
+  },
+
+  "kategoriler": {
+    "Nemlendirici": {
+      "aramalar": ["nemlendirici krem", "yüz nemlendirici"],
+      "markalar": ["Bioderma", "La Roche-Posay"],
+      "marka_aramasi": "bioderma"
+    },
+    "Temizleme": {
+      "aramalar": ["misel su", "yüz temizleme jeli"],
+      "markalar": ["Bioderma", "La Roche-Posay"]
+    },
+    "Güneş Koruyucu": {
+      "aramalar": ["güneş kremi spf 50", "yüz güneş koruyucu"],
+      "markalar": ["Bioderma", "La Roche-Posay"]
+    },
+    "Akne Bakımı": {
+      "aramalar": ["akne kremi", "sivilce bakım"],
+      "markalar": ["Bioderma", "La Roche-Posay"]
+    },
+    "Reçeteli Dermatoloji": {
+      "aramalar": ["reçeteli akne ilacı"],
+      "markalar": ["Reçeteli Ürünler"]
+    }
+  }
+}

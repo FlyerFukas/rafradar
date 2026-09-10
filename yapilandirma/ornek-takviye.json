@@ -1,0 +1,41 @@
+{
+  "ad": "Solgar",
+  "pazar": "Türkiye",
+  "hazirlayan": "",
+  "kanallar": ["n11", "trendyol"],
+  "goz_hizasi": 10,
+
+  "markalar": {
+    "Solgar": ["solgar"]
+  },
+
+  "haric_markalar": {},
+
+  "kategoriler": {
+    "C Vitamini": {
+      "aramalar": ["c vitamini", "vitamin c 1000 mg"],
+      "markalar": ["Solgar"],
+      "marka_aramasi": "solgar"
+    },
+    "Multivitamin": {
+      "aramalar": ["multivitamin", "multivitamin mineral"],
+      "markalar": ["Solgar"]
+    },
+    "Magnezyum": {
+      "aramalar": ["magnezyum", "magnezyum sitrat"],
+      "markalar": ["Solgar"]
+    },
+    "Omega 3": {
+      "aramalar": ["omega 3", "balık yağı"],
+      "markalar": ["Solgar"]
+    },
+    "Kolajen": {
+      "aramalar": ["kolajen", "collagen takviye"],
+      "markalar": ["Solgar"]
+    },
+    "D Vitamini": {
+      "aramalar": ["d vitamini", "d3 vitamini damla"],
+      "markalar": ["Solgar"]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+# Kisisel yapilandirma (ornekler depoda, aktif olan kullaniciya ait)
+yapilandirma/aktif.json
+
+# Gecici yakalamalar ve loglar
+veri/*.html
+veri/*_ham.md
+veri/*log*.txt
+
+# Firecrawl yerel onbellegi
+.firecrawl/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Isletim sistemi
+Thumbs.db
+.DS_Store
+
+# NOT: veri/tarama_*.json ve cikti/ bilincli olarak depoda - ornek cikti
+# olmadan aracin ne urettigi anlasilmiyor.

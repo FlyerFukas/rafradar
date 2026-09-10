@@ -1,0 +1,33 @@
+{
+  "ad": "Mustela",
+  "pazar": "Türkiye",
+  "hazirlayan": "",
+  "kanallar": ["n11", "trendyol"],
+  "goz_hizasi": 10,
+
+  "markalar": {
+    "Mustela": ["mustela"]
+  },
+
+  "haric_markalar": {},
+
+  "kategoriler": {
+    "Pişik Bakımı": {
+      "aramalar": ["pişik kremi", "bebek pişik"],
+      "markalar": ["Mustela"],
+      "marka_aramasi": "mustela"
+    },
+    "Bebek Şampuanı": {
+      "aramalar": ["bebek şampuanı", "bebek saç vücut şampuanı"],
+      "markalar": ["Mustela"]
+    },
+    "Bebek Nemlendirici": {
+      "aramalar": ["bebek losyonu", "bebek nemlendirici krem"],
+      "markalar": ["Mustela"]
+    },
+    "Bebek Güneş": {
+      "aramalar": ["bebek güneş kremi", "çocuk güneş koruyucu"],
+      "markalar": ["Mustela"]
+    }
+  }
+}

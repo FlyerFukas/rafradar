@@ -1,0 +1,1692 @@
+{
+ "tarih": "2026-09-09",
+ "kategoriler": {
+  "C Vitamini": {
+   "toplam": 175,
+   "izlenen": 18,
+   "raf_payi": 10.3,
+   "bulunurluk": true,
+   "goz_hizasinda": 8,
+   "en_iyi_sira": 1,
+   "izlenen_medyan": 800.11,
+   "kategori_medyan": 497.2,
+   "fiyat_endeksi": 1.61,
+   "rakipler": [
+    [
+     "Nutraxin",
+     17
+    ],
+    [
+     "Ocean",
+     13
+    ],
+    [
+     "Redoxon",
+     9
+    ],
+    [
+     "The Purest Solutions",
+     7
+    ],
+    [
+     "The Ordinary",
+     5
+    ],
+    [
+     "The Ceel",
+     4
+    ]
+   ],
+   "izlenen_markalar": [
+    [
+     "Solgar",
+     18
+    ]
+   ],
+   "tip": "izlenen",
+   "tum_dahil": {
+    "toplam": 243,
+    "izlenen": 18,
+    "raf_payi": 7.4,
+    "bulunurluk": true,
+    "goz_hizasinda": 8,
+    "en_iyi_sira": 1,
+    "izlenen_medyan": 800.11,
+    "kategori_medyan": 568.37,
+    "fiyat_endeksi": 1.41,
+    "rakipler": [
+     [
+      "Nivea",
+      30
+     ],
+     [
+      "Dr Umit Aktas",
+      27
+     ],
+     [
+      "Nutraxin",
+      17
+     ],
+     [
+      "Ocean",
+      13
+     ],
+     [
+      "Pharmaton",
+      12
+     ],
+     [
+      "Redoxon",
+      9
+     ]
+    ],
+    "izlenen_markalar": [
+     [
+      "Solgar",
+      18
+     ]
+    ]
+   },
+   "kanallar": {
+    "n11": {
+     "toplam": 40,
+     "izlenen": 9,
+     "raf_payi": 22.5,
+     "bulunurluk": true,
+     "goz_hizasinda": 7,
+     "en_iyi_sira": 1,
+     "izlenen_medyan": 800.11,
+     "kategori_medyan": 658.6,
+     "fiyat_endeksi": 1.21,
+     "rakipler": [
+      [
+       "Nutraxin",
+       7
+      ],
+      [
+       "Redoxon",
+       4
+      ],
+      [
+       "NCS",
+       3
+      ],
+      [
+       "VeNatura",
+       2
+      ],
+      [
+       "Ocean",
+       2
+      ],
+      [
+       "Vitrex",
+       1
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       9
+      ]
+     ]
+    },
+    "trendyol": {
+     "toplam": 135,
+     "izlenen": 9,
+     "raf_payi": 6.7,
+     "bulunurluk": true,
+     "goz_hizasinda": 1,
+     "en_iyi_sira": 10,
+     "izlenen_medyan": 785.62,
+     "kategori_medyan": 382.48,
+     "fiyat_endeksi": 2.05,
+     "rakipler": [
+      [
+       "Ocean",
+       11
+      ],
+      [
+       "Nutraxin",
+       10
+      ],
+      [
+       "The Purest Solutions",
+       7
+      ],
+      [
+       "The Ordinary",
+       5
+      ],
+      [
+       "Redoxon",
+       5
+      ],
+      [
+       "The Ceel",
+       4
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       9
+      ]
+     ]
+    }
+   },
+   "aramalar": {
+    "c vitamini": {
+     "toplam": 86,
+     "izlenen": 8,
+     "raf_payi": 9.3,
+     "bulunurluk": true,
+     "goz_hizasinda": 3,
+     "en_iyi_sira": 4,
+     "izlenen_medyan": 766.5,
+     "kategori_medyan": 443.38,
+     "fiyat_endeksi": 1.73,
+     "rakipler": [
+      [
+       "Nutraxin",
+       8
+      ],
+      [
+       "The Purest Solutions",
+       7
+      ],
+      [
+       "Ocean",
+       6
+      ],
+      [
+       "The Ordinary",
+       5
+      ],
+      [
+       "The Ceel",
+       4
+      ],
+      [
+       "Cream Co",
+       3
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       8
+      ]
+     ]
+    },
+    "vitamin c 1000 mg": {
+     "toplam": 89,
+     "izlenen": 10,
+     "raf_payi": 11.2,
+     "bulunurluk": true,
+     "goz_hizasinda": 5,
+     "en_iyi_sira": 1,
+     "izlenen_medyan": 847.96,
+     "kategori_medyan": 584.12,
+     "fiyat_endeksi": 1.45,
+     "rakipler": [
+      [
+       "Nutraxin",
+       9
+      ],
+      [
+       "Redoxon",
+       8
+      ],
+      [
+       "Ocean",
+       7
+      ],
+      [
+       "NCS",
+       3
+      ],
+      [
+       "More Than",
+       3
+      ],
+      [
+       "Applied Nutrition",
+       3
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       10
+      ]
+     ]
+    }
+   },
+   "vitrin": {
+    "adet": 68,
+    "markalar": [
+     [
+      "Nivea",
+      30
+     ],
+     [
+      "Dr Umit Aktas",
+      26
+     ],
+     [
+      "Pharmaton",
+      12
+     ]
+    ],
+    "izlenen_adet": 0
+   }
+  },
+  "Multivitamin": {
+   "toplam": 173,
+   "izlenen": 1,
+   "raf_payi": 0.6,
+   "bulunurluk": true,
+   "goz_hizasinda": 0,
+   "en_iyi_sira": 16,
+   "izlenen_medyan": null,
+   "kategori_medyan": 521.69,
+   "fiyat_endeksi": null,
+   "rakipler": [
+    [
+     "Nutraxin",
+     33
+    ],
+    [
+     "Pharmaton",
+     12
+    ],
+    [
+     "Ocean",
+     9
+    ],
+    [
+     "Erbatab",
+     8
+    ],
+    [
+     "Dynavit",
+     7
+    ],
+    [
+     "Supradyn",
+     7
+    ]
+   ],
+   "izlenen_markalar": [
+    [
+     "Solgar",
+     1
+    ]
+   ],
+   "tip": "izlenen",
+   "tum_dahil": {
+    "toplam": 267,
+    "izlenen": 1,
+    "raf_payi": 0.4,
+    "bulunurluk": true,
+    "goz_hizasinda": 0,
+    "en_iyi_sira": 16,
+    "izlenen_medyan": null,
+    "kategori_medyan": 574.84,
+    "fiyat_endeksi": null,
+    "rakipler": [
+     [
+      "Nutraxin",
+      33
+     ],
+     [
+      "Dr Umit Aktas",
+      26
+     ],
+     [
+      "Bork Swiss Natural",
+      22
+     ],
+     [
+      "Purevits",
+      17
+     ],
+     [
+      "Erbatab",
+      14
+     ],
+     [
+      "Pharmaton",
+      12
+     ]
+    ],
+    "izlenen_markalar": [
+     [
+      "Solgar",
+      1
+     ]
+    ]
+   },
+   "kanallar": {
+    "n11": {
+     "toplam": 40,
+     "izlenen": 0,
+     "raf_payi": 0.0,
+     "bulunurluk": false,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": null,
+     "izlenen_medyan": null,
+     "kategori_medyan": 506.78,
+     "fiyat_endeksi": null,
+     "rakipler": [
+      [
+       "Nutraxin",
+       12
+      ],
+      [
+       "Pharmaton",
+       4
+      ],
+      [
+       "Nature's Supreme",
+       3
+      ],
+      [
+       "Kiperin",
+       3
+      ],
+      [
+       "Ocean",
+       2
+      ],
+      [
+       "Gimcat",
+       1
+      ]
+     ],
+     "izlenen_markalar": []
+    },
+    "trendyol": {
+     "toplam": 133,
+     "izlenen": 1,
+     "raf_payi": 0.8,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 16,
+     "izlenen_medyan": null,
+     "kategori_medyan": 543.44,
+     "fiyat_endeksi": null,
+     "rakipler": [
+      [
+       "Nutraxin",
+       21
+      ],
+      [
+       "Pharmaton",
+       8
+      ],
+      [
+       "Dynavit",
+       7
+      ],
+      [
+       "Ocean",
+       7
+      ],
+      [
+       "Supradyn",
+       7
+      ],
+      [
+       "Erbatab",
+       7
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       1
+      ]
+     ]
+    }
+   },
+   "aramalar": {
+    "multivitamin": {
+     "toplam": 88,
+     "izlenen": 0,
+     "raf_payi": 0.0,
+     "bulunurluk": false,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": null,
+     "izlenen_medyan": null,
+     "kategori_medyan": 496.35,
+     "fiyat_endeksi": null,
+     "rakipler": [
+      [
+       "Nutraxin",
+       12
+      ],
+      [
+       "Ocean",
+       8
+      ],
+      [
+       "Erbatab",
+       7
+      ],
+      [
+       "Natures Supreme",
+       6
+      ],
+      [
+       "Pharmaton",
+       5
+      ],
+      [
+       "Supradyn",
+       4
+      ]
+     ],
+     "izlenen_markalar": []
+    },
+    "multivitamin mineral": {
+     "toplam": 85,
+     "izlenen": 1,
+     "raf_payi": 1.2,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 16,
+     "izlenen_medyan": null,
+     "kategori_medyan": 663.05,
+     "fiyat_endeksi": null,
+     "rakipler": [
+      [
+       "Nutraxin",
+       21
+      ],
+      [
+       "Pharmaton",
+       7
+      ],
+      [
+       "Dynavit",
+       4
+      ],
+      [
+       "Kiperin",
+       3
+      ],
+      [
+       "Supradyn",
+       3
+      ],
+      [
+       "Anocin",
+       3
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       1
+      ]
+     ]
+    }
+   },
+   "vitrin": {
+    "adet": 94,
+    "markalar": [
+     [
+      "Dr Umit Aktas",
+      26
+     ],
+     [
+      "Bork Swiss Natural",
+      22
+     ],
+     [
+      "Purevits",
+      17
+     ],
+     [
+      "Erbatab",
+      6
+     ],
+     [
+      "Unien Pharma",
+      5
+     ]
+    ],
+    "izlenen_adet": 0
+   }
+  },
+  "Magnezyum": {
+   "toplam": 175,
+   "izlenen": 8,
+   "raf_payi": 4.6,
+   "bulunurluk": true,
+   "goz_hizasinda": 2,
+   "en_iyi_sira": 5,
+   "izlenen_medyan": 631.88,
+   "kategori_medyan": 491.25,
+   "fiyat_endeksi": 1.29,
+   "rakipler": [
+    [
+     "Nutraxin",
+     23
+    ],
+    [
+     "Venatura",
+     13
+    ],
+    [
+     "VeNatura",
+     12
+    ],
+    [
+     "Ocean",
+     10
+    ],
+    [
+     "Dynavit",
+     8
+    ],
+    [
+     "Magnimore",
+     6
+    ]
+   ],
+   "izlenen_markalar": [
+    [
+     "Solgar",
+     8
+    ]
+   ],
+   "tip": "izlenen",
+   "tum_dahil": {
+    "toplam": 192,
+    "izlenen": 8,
+    "raf_payi": 4.2,
+    "bulunurluk": true,
+    "goz_hizasinda": 2,
+    "en_iyi_sira": 5,
+    "izlenen_medyan": 631.88,
+    "kategori_medyan": 464.9,
+    "fiyat_endeksi": 1.36,
+    "rakipler": [
+     [
+      "Nutraxin",
+      23
+     ],
+     [
+      "Venatura",
+      13
+     ],
+     [
+      "VeNatura",
+      12
+     ],
+     [
+      "Ocean",
+      10
+     ],
+     [
+      "Dynavit",
+      8
+     ],
+     [
+      "Erbatab",
+      7
+     ]
+    ],
+    "izlenen_markalar": [
+     [
+      "Solgar",
+      8
+     ]
+    ]
+   },
+   "kanallar": {
+    "n11": {
+     "toplam": 40,
+     "izlenen": 2,
+     "raf_payi": 5.0,
+     "bulunurluk": true,
+     "goz_hizasinda": 1,
+     "en_iyi_sira": 8,
+     "izlenen_medyan": 544.2,
+     "kategori_medyan": 536.21,
+     "fiyat_endeksi": 1.01,
+     "rakipler": [
+      [
+       "VeNatura",
+       12
+      ],
+      [
+       "Nutraxin",
+       3
+      ],
+      [
+       "Erbatab",
+       2
+      ],
+      [
+       "Newday",
+       2
+      ],
+      [
+       "Magnimore",
+       2
+      ],
+      [
+       "Kiperin",
+       2
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       2
+      ]
+     ]
+    },
+    "trendyol": {
+     "toplam": 135,
+     "izlenen": 6,
+     "raf_payi": 4.4,
+     "bulunurluk": true,
+     "goz_hizasinda": 1,
+     "en_iyi_sira": 5,
+     "izlenen_medyan": 631.88,
+     "kategori_medyan": 477.12,
+     "fiyat_endeksi": 1.32,
+     "rakipler": [
+      [
+       "Nutraxin",
+       20
+      ],
+      [
+       "Venatura",
+       13
+      ],
+      [
+       "Ocean",
+       9
+      ],
+      [
+       "Dynavit",
+       7
+      ],
+      [
+       "Natures Supreme",
+       5
+      ],
+      [
+       "Simple Nutritions",
+       5
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       6
+      ]
+     ]
+    }
+   },
+   "aramalar": {
+    "magnezyum": {
+     "toplam": 87,
+     "izlenen": 3,
+     "raf_payi": 3.4,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 14,
+     "izlenen_medyan": 588.04,
+     "kategori_medyan": 551.7,
+     "fiyat_endeksi": 1.07,
+     "rakipler": [
+      [
+       "Nutraxin",
+       15
+      ],
+      [
+       "VeNatura",
+       6
+      ],
+      [
+       "Ocean",
+       6
+      ],
+      [
+       "Dynavit",
+       4
+      ],
+      [
+       "Venatura",
+       4
+      ],
+      [
+       "Newday",
+       3
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       3
+      ]
+     ]
+    },
+    "magnezyum sitrat": {
+     "toplam": 88,
+     "izlenen": 5,
+     "raf_payi": 5.7,
+     "bulunurluk": true,
+     "goz_hizasinda": 2,
+     "en_iyi_sira": 5,
+     "izlenen_medyan": 631.88,
+     "kategori_medyan": 461.98,
+     "fiyat_endeksi": 1.37,
+     "rakipler": [
+      [
+       "Venatura",
+       9
+      ],
+      [
+       "Nutraxin",
+       8
+      ],
+      [
+       "VeNatura",
+       6
+      ],
+      [
+       "Dynavit",
+       4
+      ],
+      [
+       "Magnimore",
+       4
+      ],
+      [
+       "Ocean",
+       4
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       5
+      ]
+     ]
+    }
+   },
+   "vitrin": {
+    "adet": 17,
+    "markalar": [
+     [
+      "Vitabir",
+      6
+     ],
+     [
+      "Unien Pharma",
+      5
+     ],
+     [
+      "Erbatab",
+      4
+     ],
+     [
+      "Genel Markalar",
+      2
+     ]
+    ],
+    "izlenen_adet": 0
+   }
+  },
+  "Omega 3": {
+   "toplam": 110,
+   "izlenen": 5,
+   "raf_payi": 4.5,
+   "bulunurluk": true,
+   "goz_hizasinda": 0,
+   "en_iyi_sira": 12,
+   "izlenen_medyan": 1791.14,
+   "kategori_medyan": 680.85,
+   "fiyat_endeksi": 2.63,
+   "rakipler": [
+    [
+     "Ocean",
+     17
+    ],
+    [
+     "Sorvagen",
+     15
+    ],
+    [
+     "Nutraxin",
+     10
+    ],
+    [
+     "Norwegian Health",
+     6
+    ],
+    [
+     "Aksu Vital",
+     4
+    ],
+    [
+     "Maxigal",
+     4
+    ]
+   ],
+   "izlenen_markalar": [
+    [
+     "Solgar",
+     5
+    ]
+   ],
+   "tip": "izlenen",
+   "tum_dahil": {
+    "toplam": 158,
+    "izlenen": 5,
+    "raf_payi": 3.2,
+    "bulunurluk": true,
+    "goz_hizasinda": 0,
+    "en_iyi_sira": 12,
+    "izlenen_medyan": 1791.14,
+    "kategori_medyan": 680.85,
+    "fiyat_endeksi": 2.63,
+    "rakipler": [
+     [
+      "Dr Umit Aktas",
+      48
+     ],
+     [
+      "Ocean",
+      17
+     ],
+     [
+      "Sorvagen",
+      15
+     ],
+     [
+      "Nutraxin",
+      10
+     ],
+     [
+      "Norwegian Health",
+      6
+     ],
+     [
+      "Aksu Vital",
+      4
+     ]
+    ],
+    "izlenen_markalar": [
+     [
+      "Solgar",
+      5
+     ]
+    ]
+   },
+   "kanallar": {
+    "n11": {
+     "toplam": 40,
+     "izlenen": 2,
+     "raf_payi": 5.0,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 15,
+     "izlenen_medyan": 1758.71,
+     "kategori_medyan": 702.32,
+     "fiyat_endeksi": 2.5,
+     "rakipler": [
+      [
+       "Sorvagen",
+       10
+      ],
+      [
+       "Ocean",
+       4
+      ],
+      [
+       "Nutraxin",
+       4
+      ],
+      [
+       "Aksu Vital",
+       4
+      ],
+      [
+       "Pharmaton",
+       2
+      ],
+      [
+       "Walker's Vitamins",
+       2
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       2
+      ]
+     ]
+    },
+    "trendyol": {
+     "toplam": 70,
+     "izlenen": 3,
+     "raf_payi": 4.3,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 12,
+     "izlenen_medyan": 1823.58,
+     "kategori_medyan": 465.62,
+     "fiyat_endeksi": 3.92,
+     "rakipler": [
+      [
+       "Ocean",
+       13
+      ],
+      [
+       "Nutraxin",
+       6
+      ],
+      [
+       "Sorvagen",
+       5
+      ],
+      [
+       "Maxigal",
+       4
+      ],
+      [
+       "Dr Phytopharma",
+       4
+      ],
+      [
+       "Norwegian Health",
+       4
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       3
+      ]
+     ]
+    }
+   },
+   "aramalar": {
+    "omega 3": {
+     "toplam": 54,
+     "izlenen": 3,
+     "raf_payi": 5.6,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 12,
+     "izlenen_medyan": 1791.14,
+     "kategori_medyan": 694.11,
+     "fiyat_endeksi": 2.58,
+     "rakipler": [
+      [
+       "Sorvagen",
+       6
+      ],
+      [
+       "Ocean",
+       6
+      ],
+      [
+       "Nutraxin",
+       6
+      ],
+      [
+       "Norwegian Health",
+       3
+      ],
+      [
+       "Aksu Vital",
+       2
+      ],
+      [
+       "Maxigal",
+       2
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       3
+      ]
+     ]
+    },
+    "balık yağı": {
+     "toplam": 56,
+     "izlenen": 2,
+     "raf_payi": 3.6,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 15,
+     "izlenen_medyan": 1791.14,
+     "kategori_medyan": 568.5,
+     "fiyat_endeksi": 3.15,
+     "rakipler": [
+      [
+       "Ocean",
+       11
+      ],
+      [
+       "Sorvagen",
+       9
+      ],
+      [
+       "Nutraxin",
+       4
+      ],
+      [
+       "Norwegian Health",
+       3
+      ],
+      [
+       "Aksu Vital",
+       2
+      ],
+      [
+       "Smart Up",
+       2
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       2
+      ]
+     ]
+    }
+   },
+   "vitrin": {
+    "adet": 48,
+    "markalar": [
+     [
+      "Dr Umit Aktas",
+      48
+     ]
+    ],
+    "izlenen_adet": 0
+   }
+  },
+  "Kolajen": {
+   "toplam": 175,
+   "izlenen": 2,
+   "raf_payi": 1.1,
+   "bulunurluk": true,
+   "goz_hizasinda": 0,
+   "en_iyi_sira": 18,
+   "izlenen_medyan": 1382.24,
+   "kategori_medyan": 679.53,
+   "fiyat_endeksi": 2.03,
+   "rakipler": [
+    [
+     "Nutraxin",
+     28
+    ],
+    [
+     "Day2Day",
+     21
+    ],
+    [
+     "Kiperin",
+     14
+    ],
+    [
+     "Collagen Forte Platinum",
+     10
+    ],
+    [
+     "Natures Supreme",
+     10
+    ],
+    [
+     "Collagen Life",
+     6
+    ]
+   ],
+   "izlenen_markalar": [
+    [
+     "Solgar",
+     2
+    ]
+   ],
+   "tip": "izlenen",
+   "tum_dahil": {
+    "toplam": 189,
+    "izlenen": 2,
+    "raf_payi": 1.1,
+    "bulunurluk": true,
+    "goz_hizasinda": 0,
+    "en_iyi_sira": 18,
+    "izlenen_medyan": 1382.24,
+    "kategori_medyan": 746.51,
+    "fiyat_endeksi": 1.85,
+    "rakipler": [
+     [
+      "Nutraxin",
+      28
+     ],
+     [
+      "Day2Day",
+      21
+     ],
+     [
+      "Kiperin",
+      14
+     ],
+     [
+      "Suda Collagen",
+      10
+     ],
+     [
+      "Collagen Forte Platinum",
+      10
+     ],
+     [
+      "Natures Supreme",
+      10
+     ]
+    ],
+    "izlenen_markalar": [
+     [
+      "Solgar",
+      2
+     ]
+    ]
+   },
+   "kanallar": {
+    "n11": {
+     "toplam": 40,
+     "izlenen": 1,
+     "raf_payi": 2.5,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 18,
+     "izlenen_medyan": 1275.25,
+     "kategori_medyan": 764.51,
+     "fiyat_endeksi": 1.67,
+     "rakipler": [
+      [
+       "Nutraxin",
+       9
+      ],
+      [
+       "Day2Day",
+       6
+      ],
+      [
+       "Kiperin",
+       5
+      ],
+      [
+       "Collagen Life",
+       3
+      ],
+      [
+       "Suda Collagen",
+       3
+      ],
+      [
+       "Nature's Bounty",
+       2
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       1
+      ]
+     ]
+    },
+    "trendyol": {
+     "toplam": 135,
+     "izlenen": 1,
+     "raf_payi": 0.7,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 48,
+     "izlenen_medyan": 1489.22,
+     "kategori_medyan": 629.9,
+     "fiyat_endeksi": 2.36,
+     "rakipler": [
+      [
+       "Nutraxin",
+       19
+      ],
+      [
+       "Day2Day",
+       15
+      ],
+      [
+       "Collagen Forte Platinum",
+       10
+      ],
+      [
+       "Natures Supreme",
+       10
+      ],
+      [
+       "Kiperin",
+       9
+      ],
+      [
+       "Icollagen",
+       6
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       1
+      ]
+     ]
+    }
+   },
+   "aramalar": {
+    "kolajen": {
+     "toplam": 87,
+     "izlenen": 1,
+     "raf_payi": 1.1,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 48,
+     "izlenen_medyan": 1489.22,
+     "kategori_medyan": 679.53,
+     "fiyat_endeksi": 2.19,
+     "rakipler": [
+      [
+       "Nutraxin",
+       13
+      ],
+      [
+       "Day2Day",
+       9
+      ],
+      [
+       "Kiperin",
+       8
+      ],
+      [
+       "Collagen Forte Platinum",
+       6
+      ],
+      [
+       "Natures Supreme",
+       6
+      ],
+      [
+       "Icollagen",
+       3
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       1
+      ]
+     ]
+    },
+    "collagen takviye": {
+     "toplam": 88,
+     "izlenen": 1,
+     "raf_payi": 1.1,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 18,
+     "izlenen_medyan": 1275.25,
+     "kategori_medyan": 679.53,
+     "fiyat_endeksi": 1.88,
+     "rakipler": [
+      [
+       "Nutraxin",
+       15
+      ],
+      [
+       "Day2Day",
+       12
+      ],
+      [
+       "Kiperin",
+       6
+      ],
+      [
+       "Collagen Life",
+       4
+      ],
+      [
+       "Collagen Forte Platinum",
+       4
+      ],
+      [
+       "Natures Supreme",
+       4
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       1
+      ]
+     ]
+    }
+   },
+   "vitrin": {
+    "adet": 14,
+    "markalar": [
+     [
+      "Dr Sammy S",
+      8
+     ],
+     [
+      "Suda Collagen",
+      6
+     ]
+    ],
+    "izlenen_adet": 0
+   }
+  },
+  "D Vitamini": {
+   "toplam": 145,
+   "izlenen": 5,
+   "raf_payi": 3.4,
+   "bulunurluk": true,
+   "goz_hizasinda": 1,
+   "en_iyi_sira": 10,
+   "izlenen_medyan": 592.66,
+   "kategori_medyan": 419.9,
+   "fiyat_endeksi": 1.41,
+   "rakipler": [
+    [
+     "Ocean",
+     27
+    ],
+    [
+     "Nutraxin",
+     16
+    ],
+    [
+     "Erbatab",
+     9
+    ],
+    [
+     "Natures Supreme",
+     8
+    ],
+    [
+     "Dynavit",
+     6
+    ],
+    [
+     "VeNatura",
+     4
+    ]
+   ],
+   "izlenen_markalar": [
+    [
+     "Solgar",
+     5
+    ]
+   ],
+   "tip": "izlenen",
+   "tum_dahil": {
+    "toplam": 173,
+    "izlenen": 5,
+    "raf_payi": 2.9,
+    "bulunurluk": true,
+    "goz_hizasinda": 1,
+    "en_iyi_sira": 10,
+    "izlenen_medyan": 592.66,
+    "kategori_medyan": 419.9,
+    "fiyat_endeksi": 1.41,
+    "rakipler": [
+     [
+      "Ocean",
+      27
+     ],
+     [
+      "Dr Umit Aktas",
+      26
+     ],
+     [
+      "Nutraxin",
+      16
+     ],
+     [
+      "Erbatab",
+      9
+     ],
+     [
+      "Natures Supreme",
+      8
+     ],
+     [
+      "Dynavit",
+      6
+     ]
+    ],
+    "izlenen_markalar": [
+     [
+      "Solgar",
+      5
+     ]
+    ]
+   },
+   "kanallar": {
+    "n11": {
+     "toplam": 41,
+     "izlenen": 2,
+     "raf_payi": 4.9,
+     "bulunurluk": true,
+     "goz_hizasinda": 1,
+     "en_iyi_sira": 10,
+     "izlenen_medyan": 589.59,
+     "kategori_medyan": 463.2,
+     "fiyat_endeksi": 1.27,
+     "rakipler": [
+      [
+       "Ocean",
+       9
+      ],
+      [
+       "Nutraxin",
+       8
+      ],
+      [
+       "Erbatab",
+       5
+      ],
+      [
+       "VeNatura",
+       4
+      ],
+      [
+       "Osende",
+       2
+      ],
+      [
+       "Virtus",
+       1
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       2
+      ]
+     ]
+    },
+    "trendyol": {
+     "toplam": 104,
+     "izlenen": 3,
+     "raf_payi": 2.9,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 19,
+     "izlenen_medyan": 592.66,
+     "kategori_medyan": 372.38,
+     "fiyat_endeksi": 1.59,
+     "rakipler": [
+      [
+       "Ocean",
+       18
+      ],
+      [
+       "Natures Supreme",
+       8
+      ],
+      [
+       "Nutraxin",
+       8
+      ],
+      [
+       "Dynavit",
+       6
+      ],
+      [
+       "Venatura",
+       4
+      ],
+      [
+       "Erbatab",
+       4
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       3
+      ]
+     ]
+    }
+   },
+   "aramalar": {
+    "d vitamini": {
+     "toplam": 54,
+     "izlenen": 3,
+     "raf_payi": 5.6,
+     "bulunurluk": true,
+     "goz_hizasinda": 1,
+     "en_iyi_sira": 10,
+     "izlenen_medyan": 592.66,
+     "kategori_medyan": 431.87,
+     "fiyat_endeksi": 1.37,
+     "rakipler": [
+      [
+       "Nutraxin",
+       10
+      ],
+      [
+       "Ocean",
+       9
+      ],
+      [
+       "Erbatab",
+       5
+      ],
+      [
+       "Dynavit",
+       3
+      ],
+      [
+       "Natures Supreme",
+       2
+      ],
+      [
+       "Lifecell",
+       2
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       3
+      ]
+     ]
+    },
+    "d3 vitamini damla": {
+     "toplam": 91,
+     "izlenen": 2,
+     "raf_payi": 2.2,
+     "bulunurluk": true,
+     "goz_hizasinda": 0,
+     "en_iyi_sira": 30,
+     "izlenen_medyan": 564.62,
+     "kategori_medyan": 374.2,
+     "fiyat_endeksi": 1.51,
+     "rakipler": [
+      [
+       "Ocean",
+       18
+      ],
+      [
+       "Nutraxin",
+       6
+      ],
+      [
+       "Natures Supreme",
+       6
+      ],
+      [
+       "Erbatab",
+       4
+      ],
+      [
+       "VeNatura",
+       3
+      ],
+      [
+       "Venatura",
+       3
+      ]
+     ],
+     "izlenen_markalar": [
+      [
+       "Solgar",
+       2
+      ]
+     ]
+    }
+   },
+   "vitrin": {
+    "adet": 28,
+    "markalar": [
+     [
+      "Dr Umit Aktas",
+      24
+     ],
+     [
+      "Vitabir",
+      3
+     ],
+     [
+      "Genel Markalar",
+      1
+     ]
+    ],
+    "izlenen_adet": 0
+   }
+  }
+ },
+ "ozet": {
+  "kategori_sayisi": 6,
+  "toplam_urun": 953,
+  "ortalama_raf_payi": 4.1,
+  "sifir_kategoriler": [],
+  "goz_hizasi_yok": [
+   "Multivitamin",
+   "Omega 3",
+   "Kolajen"
+  ]
+ }
+}

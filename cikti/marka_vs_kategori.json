@@ -1,0 +1,20 @@
+[
+ {
+  "marka": "Solgar",
+  "marka_arama": "solgar",
+  "marka_bulunan": 72,
+  "marka_toplam": 73,
+  "kategoriler": [
+   {
+    "arama": "c vitamini",
+    "bulunan": 1,
+    "toplam": 36
+   },
+   {
+    "arama": "multivitamin",
+    "bulunan": 0,
+    "toplam": 36
+   }
+  ]
+ }
+]
