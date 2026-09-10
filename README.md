@@ -9,7 +9,7 @@
 **Digital shelf audit for e-commerce search results.** Retail teams measure the
 physical shelf: is the product there, is it at eye level, how much space does it
 take, is the price right. RafRadar asks the same four questions about the **online
-shelf** — because what eye level is on a physical shelf, the first page of search
+shelf** because what eye level is on a physical shelf, the first page of search
 results is online.
 
 Point it at a brand and a set of categories. It runs the searches, records every
@@ -28,7 +28,7 @@ come from configuration, not from code.</sub>
 ## What it found (example run)
 
 The dashboard above comes from a real scan of a supplement brand across six
-categories — 24 searches, 1,222 products. These are the numbers it produced:
+categories 24 searches, 1,222 products. These are the numbers it produced:
 
 | Category | Share of shelf | Eye level | Who owns the shelf |
 |---|---:|---:|---|
@@ -40,7 +40,7 @@ categories — 24 searches, 1,222 products. These are the numbers it produced:
 | Vitamin C | 10.3% | 8/18 | Nutraxin (17) |
 
 **Average organic share of shelf: 4.1%.** In three categories the brand has
-products listed but none of them reach the top 10 — a ranking problem, not an
+products listed but none of them reach the top 10 a ranking problem, not an
 availability one, and the tool says so explicitly.
 
 The headline the run produced:
@@ -49,7 +49,7 @@ The headline the run produced:
 > 36 results with **not a single one** of them from the brand.
 
 That gap is the whole point. The brand is found by people who already know it and
-missed by everyone else — so it defends its customers but cannot win new ones from
+missed by everyone else so it defends its customers but cannot win new ones from
 the category.
 
 📄 The full generated report: [`cikti/Solgar-dijital-raf.pdf`](cikti/Solgar-dijital-raf.pdf)
@@ -71,23 +71,23 @@ brand's products marked and the metrics recalculating for that selection.
 
 Plus three things a plain rank check misses:
 
-- 📣 **Ad pressure** — who bought the sponsored carousel slots on the search page
-- 🔤 **Keyword trap** — how visibility swings between wordings of the same category
-- 🔍 **Brand search vs category search** — found by name, invisible by category
+- 📣 **Ad pressure** who bought the sponsored carousel slots on the search page
+- 🔤 **Keyword trap** how visibility swings between wordings of the same category
+- 🔍 **Brand search vs category search** found by name, invisible by category
 
 ## What it does
 
-- 🛒 **Two channels** — N11 (free, reads the site's own JSON-LD) and Trendyol
+- 🛒 **Two channels** N11 (free, reads the site's own JSON-LD) and Trendyol
   (via Firecrawl with Turkey geo-targeting, since the site blocks plain requests)
-- ✂️ **Separates paid from organic** — sponsored carousel cards are not shelf.
+- ✂️ **Separates paid from organic** sponsored carousel cards are not shelf.
   Counting them inflates share of shelf; they are reported as their own metric
-- 💸 **Reads prices from the DOM, not from text** — a product card shows sale
+- 💸 **Reads prices from the DOM, not from text** a product card shows sale
   price, strikethrough price and unit price together, and a regex picks the wrong one
-- 🧾 **Generates the actions** — every recommendation is born from a threshold
+- 🧾 **Generates the actions** every recommendation is born from a threshold
   being crossed, and carries the measurement it came from. Nothing is hand-written
-- 🖥️ **Local control panel** — run the pipeline from a browser with live output,
+- 🖥️ **Local control panel** run the pipeline from a browser with live output,
   no command line needed
-- ⚙️ **Configurable** — brands, categories and search terms live in a JSON file
+- ⚙️ **Configurable** brands, categories and search terms live in a JSON file
 
 ---
 
@@ -163,7 +163,7 @@ case that demonstrates exclusions. Validate a config with `py src/ayarlar.py`.
 ### Why exclusions exist
 
 Sometimes a product's absence from the online shelf is not a gap but a legal
-requirement — prescription medicines cannot be sold online in Turkey, for example.
+requirement prescription medicines cannot be sold online in Turkey, for example.
 Counting them would drag the average down for a reason the brand cannot act on.
 `haric_markalar` separates those with their stated reason, and the report shows
 them in their own section.
@@ -199,7 +199,7 @@ returns `{kanal, arama, urunler[]}` and registering it in `topla.py`.
 Share of shelf, price index and ranking are computed in plain Python. A number
 that feeds a commercial decision should be auditable, so there is no model
 between the data and the metric. What the tool is good at is applying rules
-consistently — not guessing.
+consistently not guessing.
 
 ---
 
@@ -213,7 +213,7 @@ search pages are bought space, not organic shelf. Left in, share of shelf read
 13%; separated, it read 8.2%. The difference is advertising.
 
 **Prices come from DOM elements.** A card reads
-`649,90 TL ( 5.415,83 TL/kg ) 617,40 TL` — sale price, unit price, member price
+`649,90 TL ( 5.415,83 TL/kg ) 617,40 TL` sale price, unit price, member price
 all at once. A regex over the text picked the per-kilogram figure. Prices are now
 read from `div.price-section`, and `span.unit-price` is explicitly excluded.
 
@@ -234,7 +234,7 @@ step it depends on and warns when something needs rebuilding.
   Output is timestamped and the groundwork for trends is in place.
 - **Search results can be personalised.** Scans run without a session, but exact
   reproducibility is not guaranteed.
-- **First page only.** Deliberate — the first page is the shelf a shopper sees.
+- **First page only.** Deliberate the first page is the shelf a shopper sees.
 - **Trendyol needs Firecrawl.** The site blocks direct requests. N11 works for free.
 - **No sell-out link.** Connecting shelf share to actual sales needs internal data.
 
@@ -249,12 +249,12 @@ step it depends on and warns when something needs rebuilding.
 
 ## Contributing
 
-New channel adapters are the most useful thing you can add — see
+New channel adapters are the most useful thing you can add see
 [CONTRIBUTING.md](CONTRIBUTING.md). Tests run with `python -m unittest discover -s testler`.
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Security policy: [SECURITY.md](SECURITY.md).
+MIT see [LICENSE](LICENSE). Security policy: [SECURITY.md](SECURITY.md).
 
 ---
 
