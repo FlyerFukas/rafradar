@@ -1,6 +1,7 @@
 # RafRadar
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/License-PolyForm%20Noncommercial-blue.svg)](LICENSE)
+[![Commercial use: license required](https://img.shields.io/badge/Commercial%20use-license%20required-critical.svg)](COMMERCIAL.md)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Data](https://img.shields.io/badge/Data-Trendyol%20%2B%20N11-f27a1a.svg)](#channels)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#requirements)
@@ -17,6 +18,10 @@ product's brand, price and rank, and turns that into a readable dashboard, a
 printable report and a set of actions derived from the data itself.
 
 🇹🇷 **Türkçe sürüm: [README.tr.md](README.tr.md)**
+
+> **Licensing in one line.** Free for personal, academic and nonprofit use.
+> Using it inside a business, for a client, or in a product requires a separate
+> commercial license — see **[COMMERCIAL.md](COMMERCIAL.md)**. Asking is free.
 
 ![RafRadar dashboard](gorseller/pano.png)
 
@@ -254,7 +259,30 @@ New channel adapters are the most useful thing you can add — see
 
 ## License
 
-MIT — see [LICENSE](LICENSE). Security policy: [SECURITY.md](SECURITY.md).
+**Dual-licensed.** The source is public; that does not make it free to
+commercialise.
+
+**Free — [PolyForm Noncommercial License 1.0.0](LICENSE)**
+Personal study and experimentation, hobby projects, academic research,
+educational institutions, government bodies, charities. No permission needed.
+Your only obligation is to pass the license text and copyright notice along if
+you give the software to someone else.
+
+**Paid — commercial license required**
+Any use by or for a business is commercial: a brand tracking its own shelf, an
+agency running it for a client, embedding it in a product or SaaS, selling its
+output, or building a paid service on top of it. Terms, scope options and
+contact: **[COMMERCIAL.md](COMMERCIAL.md)**. Pricing is negotiable and there are
+reduced terms for early-stage companies and small agencies.
+
+Using the software commercially without a commercial license is a copyright
+violation.
+
+The architecture, source code and documentation are the work of
+**Furkan Akduman** ([@FlyerFukas](https://github.com/FlyerFukas)).
+
+Security policy: [SECURITY.md](SECURITY.md). Contributing (note the licensing
+terms for contributions): [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 

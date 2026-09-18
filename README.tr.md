@@ -1,6 +1,7 @@
 # RafRadar
 
-[![Lisans: MIT](https://img.shields.io/badge/Lisans-MIT-green.svg)](LICENSE)
+[![Lisans: PolyForm Noncommercial](https://img.shields.io/badge/Lisans-PolyForm%20Noncommercial-blue.svg)](LICENSE)
+[![Ticari kullanım: lisans gerekir](https://img.shields.io/badge/Ticari%20kullan%C4%B1m-lisans%20gerekir-critical.svg)](COMMERCIAL.md)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Veri](https://img.shields.io/badge/Veri-Trendyol%20%2B%20N11-f27a1a.svg)](#mimari)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)](#gereksinimler)
@@ -9,6 +10,11 @@
 **Bir markanın e-ticaret arama sonuçlarındaki görünürlüğünü ölçen dijital raf denetim aracı.**
 
 🇬🇧 **English version: [README.md](README.md)**
+
+> **Lisans, tek cümlede.** Kişisel, akademik ve ticari olmayan kullanım
+> ücretsiz. Bir işletme içinde, bir müşteri için ya da bir ürüne gömerek
+> kullanmak ayrı bir ticari lisans gerektirir — bkz.
+> **[COMMERCIAL.md](COMMERCIAL.md)**. Sormak ücretsiz.
 
 Perakendede "raf payı" ölçülür: ürün rafta var mı, göz hizasında mı, ne kadar yer
 kaplıyor, fiyatı doğru mu. RafRadar aynı soruları **online rafa** sorar; çünkü
@@ -268,7 +274,28 @@ Testler: `python -m unittest discover -s testler`
 
 ## Lisans
 
-MIT. Ayrıntı için [LICENSE](LICENSE). Güvenlik politikası: [SECURITY.md](SECURITY.md).
+**Çift lisanslı.** Kaynak kodu herkese açıktır; bu, serbestçe
+ticarileştirilebileceği anlamına gelmez.
+
+**Ücretsiz — [PolyForm Noncommercial 1.0.0](LICENSE)**
+Kişisel öğrenme ve deneme, hobi projeleri, akademik araştırma, eğitim kurumları,
+kamu kurumları, hayır kurumları. İzin almanıza gerek yok. Tek yükümlülük:
+yazılımı başkasına verirken lisans metnini ve telif bildirimini birlikte vermek.
+
+**Ücretli — ticari lisans gerekir**
+Bir işletme tarafından ya da onun için yapılan her kullanım ticaridir: kendi
+markasını izleyen bir şirket, müşterisi için çalıştıran bir ajans, ürüne veya
+SaaS'a gömme, çıktısını satma, üzerine ücretli hizmet kurma. Koşullar, lisans
+biçimleri ve iletişim: **[COMMERCIAL.md](COMMERCIAL.md)**. Fiyat pazarlığa
+açıktır; erken aşama girişimler ve küçük ajanslar için indirimli koşullar vardır.
+
+Ticari lisans almadan ticari kullanım bir telif hakkı ihlalidir.
+
+Mimari, kaynak kod ve belgeler **Furkan Akduman**
+([@FlyerFukas](https://github.com/FlyerFukas)) tarafından üretilmiştir.
+
+Güvenlik politikası: [SECURITY.md](SECURITY.md). Katkı koşulları (katkıların
+lisanslanmasına dikkat): [CONTRIBUTING.md](CONTRIBUTING.md). Güvenlik politikası: [SECURITY.md](SECURITY.md).
 
 ---
 

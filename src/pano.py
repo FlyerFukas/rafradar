@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# RafRadar - https://github.com/FlyerFukas/rafradar
+# Copyright (c) 2026 Furkan Akduman. Dual-licensed: free for noncommercial use
+# under PolyForm Noncommercial 1.0.0 (LICENSE); commercial use requires a
+# separate paid license (COMMERCIAL.md).
 """Skor JSON'undan tek sayfalik HTML pano uretir (Artifact formatinda)."""
 import sys, os, json, glob, html
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

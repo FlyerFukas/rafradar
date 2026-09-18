@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+# RafRadar - https://github.com/FlyerFukas/rafradar
+# Copyright (c) 2026 Furkan Akduman. Dual-licensed: free for noncommercial use
+# under PolyForm Noncommercial 1.0.0 (LICENSE); commercial use requires a
+# separate paid license (COMMERCIAL.md).
 """Yapılandırma yükleyici.
 
 Marka, kategori ve arama kelimeleri koda gömülü değildir; `yapilandirma/`

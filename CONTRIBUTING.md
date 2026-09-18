@@ -3,6 +3,36 @@
 Thanks for taking a look. This project is small and the bar for contributing is
 low — bug reports and new channel adapters are especially welcome.
 
+## Licensing of contributions
+
+**Read this before opening a pull request.**
+
+RafRadar is dual-licensed: free for noncommercial use under the
+[PolyForm Noncommercial License 1.0.0](LICENSE), and available under a separate
+paid license for commercial use ([COMMERCIAL.md](COMMERCIAL.md)).
+
+That model only works if the project owner can license the whole codebase
+commercially. If a contributed line cannot be included in a commercial license,
+the model breaks for everyone.
+
+So, by opening a pull request you confirm that:
+
+1. The contribution is your own work, and you have the right to submit it.
+2. You grant Furkan Akduman a perpetual, worldwide, irrevocable, royalty-free
+   right to use, modify, sublicense and **relicense** your contribution —
+   including as part of a paid commercial license — without further permission
+   or compensation.
+3. Your contribution does not include third-party code under a license
+   incompatible with the above (copyleft code, in particular, cannot be merged).
+
+You keep authorship of your work and remain credited in the commit history.
+This is not an assignment of your copyright; it is the permission the project
+needs to license the combined work.
+
+If that is not acceptable to you, please open an issue describing the change
+instead of a pull request — a described fix is still a real contribution and is
+genuinely welcome.
+
 ## Before you start
 
 Run the tests. They are plain `unittest`, no extra tooling:
@@ -73,3 +103,9 @@ markup changed and parsing broke, a snippet of the HTML that broke it is worth m
 than a screenshot.
 
 Security issues go through [SECURITY.md](SECURITY.md), not public issues.
+
+## Questions about commercial use
+
+If you want to use RafRadar inside a business, for a client, or in a product,
+that needs a commercial license — see [COMMERCIAL.md](COMMERCIAL.md). Asking is
+free and gets a quick answer.
