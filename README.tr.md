@@ -13,7 +13,7 @@
 
 > **Lisans, tek cümlede.** Kişisel, akademik ve ticari olmayan kullanım
 > ücretsiz. Bir işletme içinde, bir müşteri için ya da bir ürüne gömerek
-> kullanmak ayrı bir ticari lisans gerektirir — bkz.
+> kullanmak ayrı bir ticari lisans gerektirir; bkz.
 > **[COMMERCIAL.md](COMMERCIAL.md)**. Sormak ücretsiz.
 
 Perakendede "raf payı" ölçülür: ürün rafta var mı, göz hizasında mı, ne kadar yer
@@ -49,7 +49,7 @@ Yukarıdaki pano gerçek bir taramadan geliyor: bir takviye markası, altı kate
 | C Vitamini | %10,3 | 8/18 | Nutraxin (17) |
 
 **Ortalama organik raf payı: %4,1.** Üç kategoride markanın ürünü listede var ama
-hiçbiri ilk 10'a giremiyor — bu bir bulunurluk değil sıralama problemi ve araç
+hiçbiri ilk 10'a giremiyor: bu bir bulunurluk değil sıralama problemi ve araç
 bunu ayrıca söylüyor.
 
 Taramanın ürettiği başlık bulgu:
@@ -79,9 +79,9 @@ aramada alışverişçinin gördüğü sıralamayı olduğu gibi görüyorsunuz;
 
 Bunlara ek olarak:
 
-- **Reklam baskısı** — arama sayfasındaki vitrin/sponsorlu yerleşimleri kim almış
-- **Arama kelimesi tuzağı** — aynı kategoride kelimeye göre görünürlük nasıl değişiyor
-- **Marka araması / kategori araması farkı** — marka adıyla bulunup kategoriyle bulunamama
+- **Reklam baskısı:** arama sayfasındaki vitrin/sponsorlu yerleşimleri kim almış
+- **Arama kelimesi tuzağı:** aynı kategoride kelimeye göre görünürlük nasıl değişiyor
+- **Marka araması / kategori araması farkı:** marka adıyla bulunup kategoriyle bulunamama
 
 Aksiyon önerileri elle yazılmaz; **taramanın kendisinden üretilir.** Bir kategoride
 bulunurluk sıfırsa, sıralama ilk 10'a giremiyorsa ya da vitrin alanını tümüyle
@@ -215,7 +215,7 @@ Yeni bir satış kanalı eklemek için `ara(kelime)` fonksiyonu olan ve
 Raf payı, fiyat endeksi ve sıralama gibi sayıların tamamı saf Python ile hesaplanır.
 Ticari bir karara girecek bir sayının üretilme biçimi denetlenebilir olmalıdır;
 bu yüzden hesaplama katmanında dil modeli yoktur. Aracın "akıllı" tarafı, kuralların
-veriye uygulanmasıdır — tahmin değil.
+veriye uygulanmasıdır, tahmin değil.
 
 ---
 
@@ -229,7 +229,7 @@ vitrin blokları organik sonuç değil, satın alınmış alandır. Ayrıştır�
 raf payı yapay olarak yüksek çıkar; ayrı metrik olarak raporlanır.
 
 **Fiyat, metinden değil elementten okunur.** Ürün kartında satış fiyatı, üstü
-çizili liste fiyatı ve birim fiyat birlikte geçer — örneğin
+çizili liste fiyatı ve birim fiyat birlikte geçer; örneğin
 `649,90 TL ( 5.415,83 TL/kg ) 617,40 TL`. Düzenli ifadeyle okumak birim fiyatı
 seçebiliyordu; fiyatlar `div.price-section` elementinden alınır, `span.unit-price`
 bilinçli olarak elenir.
@@ -277,12 +277,12 @@ Testler: `python -m unittest discover -s testler`
 **Çift lisanslı.** Kaynak kodu herkese açıktır; bu, serbestçe
 ticarileştirilebileceği anlamına gelmez.
 
-**Ücretsiz — [PolyForm Noncommercial 1.0.0](LICENSE)**
+**Ücretsiz: [PolyForm Noncommercial 1.0.0](LICENSE)**
 Kişisel öğrenme ve deneme, hobi projeleri, akademik araştırma, eğitim kurumları,
 kamu kurumları, hayır kurumları. İzin almanıza gerek yok. Tek yükümlülük:
 yazılımı başkasına verirken lisans metnini ve telif bildirimini birlikte vermek.
 
-**Ücretli — ticari lisans gerekir**
+**Ücretli: ticari lisans gerekir**
 Bir işletme tarafından ya da onun için yapılan her kullanım ticaridir: kendi
 markasını izleyen bir şirket, müşterisi için çalıştıran bir ajans, ürüne veya
 SaaS'a gömme, çıktısını satma, üzerine ücretli hizmet kurma. Koşullar, lisans

@@ -1,6 +1,6 @@
 # Ticari Lisans / Commercial License
 
-> **TL;DR** — Kişisel kullanım, öğrenme, araştırma, eğitim kurumları, kamu ve
+> **TL;DR:** Kişisel kullanım, öğrenme, araştırma, eğitim kurumları, kamu ve
 > hayır kurumları için **ücretsiz**. Bir marka, ajans, işletme için ya da ticari
 > bir amaçla kullanacaksanız **ayrı bir lisans almanız gerekir.**
 >
@@ -35,7 +35,7 @@ metnini ve telif bildirimini birlikte vermenizdir.
 
 Aşağıdakiler ticari kullanımdır ve **önceden yazılı lisans almadan yapılamaz:**
 
-- Bir markanın kendi ürünlerinin raf görünürlüğünü izlemesi — şirket içinde,
+- Bir markanın kendi ürünlerinin raf görünürlüğünü izlemesi: şirket içinde,
   tek kullanıcıyla bile olsa
 - Ajans, danışmanlık veya araştırma şirketinin **müşterisi için** kullanması
 - Çıktısının (pano, PDF rapor, tarama verisi) ücretli bir teslimata girmesi
@@ -51,7 +51,7 @@ Aşağıdakiler ticari kullanımdır ve **önceden yazılı lisans almadan yapı
 
 **Ölçüt niyet değil, bağlamdır:** Kâr amacı güden bir organizasyonun içinde ya
 da onun için yapılan kullanım, o kullanım "sadece deneme" bile olsa ticaridir.
-Emin değilseniz sorun — cevap vermek hem hızlı hem ücretsiz.
+Emin değilseniz sorun; cevap vermek hem hızlı hem ücretsiz.
 
 ---
 
@@ -74,7 +74,7 @@ destek düzeyi ve münhasırlık gibi etkenlere göre belirlenir. **Pazarlığa
 açıktır.**
 
 Erken aşama girişimler, tek kişilik işletmeler ve küçük ajanslar için indirimli
-koşullar mümkündür — çekinmeden yazın.
+koşullar mümkündür, çekinmeden yazın.
 
 ---
 
@@ -83,7 +83,7 @@ koşullar mümkündür — çekinmeden yazın.
 Ticari lisans, satın alma, özelleştirme ya da "bu kullanım ticari mi?" sorusu
 için:
 
-- **GitHub:** [github.com/FlyerFukas](https://github.com/FlyerFukas) — depoda
+- **GitHub:** [github.com/FlyerFukas](https://github.com/FlyerFukas); depoda
   bir [issue](https://github.com/FlyerFukas/rafradar/issues) açabilirsiniz
   (gizli konular için doğrudan mesaj tercih edin)
 - **E-posta:** furkanakduman3452@gmail.com
@@ -158,7 +158,7 @@ Ticari lisans sözleşmesinde bu maddeler ayrıca ve daha ayrıntılı düzenlen
 
 ## 8. Katkılar
 
-Katkıya açığım — ama çift lisans modeli, katkılar için özel bir kural
+Katkıya açığım, ama çift lisans modeli, katkılar için özel bir kural
 gerektiriyor: birleştirilen katkıların **mali haklarının proje sahibine
 devredilmesi** ya da proje sahibine ticari lisanslama dahil sınırsız kullanım
 hakkı tanınması gerekir. Aksi hâlde o satırlar ticari lisansa dahil edilemez ve
@@ -183,7 +183,7 @@ tabidir.
 **Ölçülen maruziyet (18.09.2026, geçiş anında):** 0 fork, 1 star, 0 watcher.
 GitHub trafiği son 14 günde 25 benzersiz klon gösteriyordu; bu sayının önemli
 bir kısmı deponun kendi sürekli tümleştirme (GitHub Actions) çalıştırmalarına
-aittir — her iş akışı adımı depoyu yeniden klonlar ve bu klonlar da istatistiğe
+aittir; her iş akışı adımı depoyu yeniden klonlar ve bu klonlar da istatistiğe
 girer. Bilinen bir üçüncü taraf çatallaması (fork) yoktur. Kayıt niteliğinde
 buraya yazılmıştır.
 

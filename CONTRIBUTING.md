@@ -1,7 +1,7 @@
 # Contributing
 
 Thanks for taking a look. This project is small and the bar for contributing is
-low — bug reports and new channel adapters are especially welcome.
+low; bug reports and new channel adapters are especially welcome.
 
 ## Licensing of contributions
 
@@ -19,8 +19,8 @@ So, by opening a pull request you confirm that:
 
 1. The contribution is your own work, and you have the right to submit it.
 2. You grant Furkan Akduman a perpetual, worldwide, irrevocable, royalty-free
-   right to use, modify, sublicense and **relicense** your contribution —
-   including as part of a paid commercial license — without further permission
+   right to use, modify, sublicense and **relicense** your contribution,
+   including as part of a paid commercial license, without further permission
    or compensation.
 3. Your contribution does not include third-party code under a license
    incompatible with the above (copyleft code, in particular, cannot be merged).
@@ -30,7 +30,7 @@ This is not an assignment of your copyright; it is the permission the project
 needs to license the combined work.
 
 If that is not acceptable to you, please open an issue describing the change
-instead of a pull request — a described fix is still a real contribution and is
+instead of a pull request; a described fix is still a real contribution and is
 genuinely welcome.
 
 ## Before you start
@@ -107,5 +107,5 @@ Security issues go through [SECURITY.md](SECURITY.md), not public issues.
 ## Questions about commercial use
 
 If you want to use RafRadar inside a business, for a client, or in a product,
-that needs a commercial license — see [COMMERCIAL.md](COMMERCIAL.md). Asking is
+that needs a commercial license; see [COMMERCIAL.md](COMMERCIAL.md). Asking is
 free and gets a quick answer.

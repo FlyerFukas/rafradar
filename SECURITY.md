@@ -30,7 +30,7 @@ a vulnerability would mean here.
 
 **The control panel binds to localhost only.** `src/panel.py` listens on
 `127.0.0.1`, so it is not reachable from the network. It has no authentication by
-design — do not expose it through a tunnel, reverse proxy or port forward. Anyone
+design; do not expose it through a tunnel, reverse proxy or port forward. Anyone
 who can reach the panel can execute the pipeline steps on that machine.
 
 **The panel runs a fixed set of commands.** Steps are defined in a hardcoded
@@ -40,7 +40,7 @@ started while another is in progress.
 
 **Configuration files are trusted input.** `yapilandirma/*.json` is read as
 configuration, not as untrusted data. Do not run a configuration file you did not
-write or review — the search terms it contains are sent to third-party sites.
+write or review: the search terms it contains are sent to third-party sites.
 
 **Scraped content is treated as data, never as instructions.** Product titles,
 brand fields and prices are parsed and escaped before being rendered into the HTML
@@ -61,4 +61,4 @@ read or stored. If you extend a channel adapter, keep it that way.
 RafRadar reads publicly visible search result pages. Ensuring that your use of it
 complies with the terms of service of the sites being queried, and with applicable
 law in your jurisdiction, is your responsibility as the operator. Keep request
-volumes modest — the shipped adapters wait between requests for this reason.
+volumes modest; the shipped adapters wait between requests for this reason.
