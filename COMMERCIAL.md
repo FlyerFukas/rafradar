@@ -86,7 +86,7 @@ için:
 - **GitHub:** [github.com/FlyerFukas](https://github.com/FlyerFukas); depoda
   bir [issue](https://github.com/FlyerFukas/rafradar/issues) açabilirsiniz
   (gizli konular için doğrudan mesaj tercih edin)
-- **E-posta:** furkanakduman3452@gmail.com
+- **LinkedIn:** [linkedin.com/in/furkanakduman](https://www.linkedin.com/in/furkanakduman/): gizli tutulması gereken konular için doğrudan mesaj
 
 Yazarken şunları belirtirseniz süreç hızlanır:
 
