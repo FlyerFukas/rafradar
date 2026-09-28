@@ -19,14 +19,22 @@ printable report and a set of actions derived from the data itself.
 
 🇹🇷 **Türkçe sürüm: [README.tr.md](README.tr.md)**
 
-> **Licensing in one line.** Free for personal, academic and nonprofit use.
-> Using it inside a business, for a client, or in a product requires a separate
-> commercial license; see **[COMMERCIAL.md](COMMERCIAL.md)**. Asking is free.
-
 ![RafRadar dashboard](gorseller/pano.png)
 
 <sub>Real output from `yapilandirma/ornek-takviye.json`. The brand and categories
 come from configuration, not from code.</sub>
+
+**Result from the bundled example run:** 24 searches on Trendyol and N11, 1,222
+product listings. Searching the brand name returns 72 of its products; searching
+"multivitamin" returns 36 results and not one of them is the brand's.
+
+```bash
+py src/pano.py    # rebuilds the dashboard from the bundled scan, no network needed
+# baslik bulgu: Solgar | marka aramasi 72 urun vs 'multivitamin' aramasi 0/36
+```
+
+> Source-available: free for noncommercial use (PolyForm Noncommercial 1.0.0);
+> commercial use requires a licence, see [COMMERCIAL.md](COMMERCIAL.md).
 
 ---
 
